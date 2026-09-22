@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Приглашение на форум — Сказочная бухгалтерия</title>
+<style>
+  @font-face{
+    font-family:'Cramaten';
+    src:url('file:///home/user/design-system/conference-skazbuh/print/Cramaten.ttf') format('truetype');
+    font-weight:normal; font-style:normal;
+  }
+  @page{ size:A4; margin:0; }
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  html,body{ background:#fff; color:#111; }
+  body{ font-family:'Liberation Serif','Times New Roman',serif; -webkit-font-smoothing:antialiased; }
+  .page{
+    width:210mm; height:297mm; background:#fff; position:relative;
+    padding:11mm 16mm 9mm 16mm;
+  }
+  .frame{ border:0.5pt solid #111; height:100%; padding:6.5mm 8.5mm; display:flex; flex-direction:column; }
+
+  .sans{ font-family:'Liberation Sans',Arial,sans-serif; }
+
+  /* header */
+  .logo{ display:block; width:31mm; height:auto; margin:0 auto; }
+  .eyebrow{ display:flex; align-items:center; justify-content:center; gap:5mm; margin-top:4mm; }
+  .eyebrow .ln{ flex:1; height:0.5pt; background:#111; max-width:30mm; }
+  .eyebrow .tx{ font-family:'Liberation Sans',Arial,sans-serif; font-size:8.5pt; letter-spacing:2pt;
+                text-transform:uppercase; white-space:nowrap; }
+  .title{ font-family:'Cramaten','Liberation Sans',sans-serif; text-align:center; text-transform:uppercase;
+          font-size:37pt; line-height:0.98; letter-spacing:1pt; margin-top:3.5mm; }
+  .meta{ font-family:'Liberation Sans',Arial,sans-serif; text-align:center; font-size:9pt;
+         letter-spacing:1.4pt; text-transform:uppercase; margin-top:3.5mm; color:#111; }
+  .rule2{ border:0; border-top:1.2pt solid #111; margin:4.5mm 0 0 0; }
+  .rule1{ border:0; border-top:0.5pt solid #111; }
+
+  /* body */
+  .body{ font-size:10.2pt; line-height:1.4; margin-top:4.5mm; }
+  .body p{ margin:0 0 2.4mm 0; }
+  .hi{ font-weight:bold; }
+
+  .section{ font-family:'Liberation Sans',Arial,sans-serif; font-size:9.6pt; font-weight:bold;
+            letter-spacing:2.2pt; text-transform:uppercase; margin:3.8mm 0 2.6mm 0;
+            display:flex; align-items:center; gap:4mm; }
+  .section .ln{ flex:1; height:0.5pt; background:#111; }
+
+  .item{ display:flex; gap:3.6mm; margin-bottom:2.5mm; }
+  .num{ flex:0 0 auto; width:6.2mm; height:6.2mm; border:1pt solid #111; border-radius:50%;
+        font-family:'Liberation Sans',Arial,sans-serif; font-weight:bold; font-size:9.2pt;
+        display:flex; align-items:center; justify-content:center; margin-top:0.2mm; }
+  .item .tp{ font-family:'Liberation Sans',Arial,sans-serif; font-weight:bold; font-size:9.9pt; line-height:1.22; }
+  .item .sp{ font-size:9.1pt; font-style:italic; color:#444; line-height:1.28; margin-top:0.4mm; }
+
+  .callout{ border:0.7pt solid #111; background:#efefef; padding:2.8mm 4mm; margin:3.6mm 0 0 0; }
+  .callout .l1{ font-size:9.8pt; line-height:1.36; }
+  .callout .l2{ font-family:'Liberation Sans',Arial,sans-serif; font-weight:bold; font-size:9.9pt;
+                margin-top:1.8mm; letter-spacing:.2pt; }
+
+  .cta{ background:#111; color:#fff; margin-top:4mm; padding:3.2mm 6mm; display:flex;
+        align-items:center; justify-content:center; gap:7mm; }
+  .cta .a{ font-family:'Liberation Sans',Arial,sans-serif; font-weight:bold; font-size:11pt; letter-spacing:.6pt; }
+  .cta .b{ font-family:'Liberation Sans',Arial,sans-serif; font-size:11pt; letter-spacing:2.3pt; }
+
+  .closing{ font-size:10.4pt; text-align:center; margin-top:4mm; font-style:italic; }
+
+  .spacer{ flex:1 1 auto; min-height:3mm; }
+  .foot{ border-top:0.5pt solid #111; margin-top:4mm; padding-top:2.4mm;
+         font-family:'Liberation Sans',Arial,sans-serif; font-size:8.2pt; color:#333;
+         text-align:center; line-height:1.5; letter-spacing:.2pt; }
+</style>
+</head>
+<body>
+  <div class="page">
+    <div class="frame">
+
+      <img class="logo" src="file:///home/user/design-system/conference-skazbuh/print/logo-black.png" alt="1+1 — аутсорсинг бухгалтерии">
+
+      <div class="eyebrow"><span class="ln"></span><span class="tx">III&nbsp;форум&nbsp;главных&nbsp;бухгалтеров</span><span class="ln"></span></div>
+
+      <div class="title">Сказочная<br>бухгалтерия</div>
+
+      <div class="meta">5&nbsp;ноября&nbsp;2026&nbsp;&middot;&nbsp;г.&nbsp;Барнаул&nbsp;&middot;&nbsp;Театр&nbsp;кукол&nbsp;«Сказка»</div>
+
+      <hr class="rule2">
+
+      <div class="body">
+        <p class="hi">Добрый день!</p>
+        <p>5&nbsp;ноября компания «1+1» третий год подряд собирает главных бухгалтеров края на экспертный форум. В этот раз — в театре кукол «Сказка», г.&nbsp;Барнаул.</p>
+        <p>Формат сказочный, а задача серьёзная — помочь главбухам и финдиректорам работать уверенно и на опережение в 2027&nbsp;году.</p>
+      </div>
+
+      <div class="section"><span>Что разбираем</span><span class="ln"></span></div>
+
+      <div class="item">
+        <div class="num">1</div>
+        <div>
+          <div class="tp">Изменения и тренды налогового контроля 2027</div>
+          <div class="sp">Ольга Ефремова, начальник отдела налогового контроля № 1 УФНС России по Алтайскому краю</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="num">2</div>
+        <div>
+          <div class="tp">Грань между незаконным дроблением и законным структурированием бизнеса в 2026</div>
+          <div class="sp">Владислав Каминский, налоговый инженер</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="num">3</div>
+        <div>
+          <div class="tp">Требования ИФНС: как автоматизировать ответы с помощью ИИ</div>
+          <div class="sp">Юрий Марков, «Центр налоговых решений КМК»</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="num">4</div>
+        <div>
+          <div class="tp">Изменения в налоговом и бухгалтерском учёте 2027 и подготовка к закрытию года</div>
+          <div class="sp">Эксперты «1+1»</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="num">5</div>
+        <div>
+          <div class="tp">Лайфхаки, которые реально ускоряют ежедневную работу</div>
+        </div>
+      </div>
+
+      <div class="body" style="margin-top:4.5mm;">
+        <p>Вас ждут сильные эксперты, практические кейсы и ответы на ваши вопросы. Разобрать ваш вопрос можно и на форуме, и ещё месяц после — участники остаются на связи.</p>
+      </div>
+
+      <div class="callout">
+        <div class="l1">Из неформальной части: нетворкинг с коллегами, кофе-брейк, обед, фуршет, розыгрыши и подарки от партнёров.</div>
+        <div class="l2">Первые 30 билетов успевайте приобрести по ранней цене.</div>
+      </div>
+
+      <div class="cta">
+        <span class="a">ПРОГРАММА И БИЛЕТЫ &rarr;</span>
+        <span class="b">SKAZBUH.RU</span>
+      </div>
+
+      <div class="closing">Ждём вас 5&nbsp;ноября в театре кукол «Сказка», на форуме от «1+1».</div>
+
+      <div class="spacer"></div>
+
+      <div class="foot">
+        ИП Семенцова Анастасия Павловна&nbsp;&nbsp;·&nbsp;&nbsp;ОГРНИП 325220200061632<br>
+        г.&nbsp;Барнаул, ул.&nbsp;Пушкина, д.&nbsp;41, Театр кукол «Сказка»
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
