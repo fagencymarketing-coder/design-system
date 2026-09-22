@@ -68,7 +68,9 @@
 
   .closing{ font-size:9.8pt; text-align:center; margin-top:2.6mm; font-style:italic; }
 
-  .spacer{ flex:1 1 auto; min-height:2mm; }
+  /* flexible breathing gaps — distribute leftover height evenly instead of
+     pooling it into one hole above the footer */
+  .gap{ flex:1 1 0; min-height:1.5mm; }
   .foot{ border-top:0.5pt solid #111; margin-top:3mm; padding-top:2mm;
          font-family:'Liberation Sans',Arial,sans-serif; font-size:7.9pt; color:#333;
          text-align:center; line-height:1.45; letter-spacing:.2pt; }
@@ -88,11 +90,15 @@
 
       <hr class="rule2">
 
+      <div class="gap" style="flex-grow:.6"></div>
+
       <div class="body">
         <p class="hi">Уважаемый(-ая) коллега!</p>
         <p>5&nbsp;ноября компания «1+1» третий год подряд собирает главных бухгалтеров края на экспертный форум. В этот раз — в театре кукол «Сказка», г.&nbsp;Барнаул.</p>
         <p>По рейтингу RAEX мы занимаем <b>37-е&nbsp;место среди 15&nbsp;000</b> бухгалтерских компаний России. А форум задумывали как обучение для своей команды — но он перерос в отраслевое событие краевого масштаба.</p>
       </div>
+
+      <div class="gap"></div>
 
       <div class="section"><span>Что разбираем</span><span class="ln"></span></div>
 
@@ -132,9 +138,13 @@
         </div>
       </div>
 
-      <div class="body" style="margin-top:4.5mm;">
+      <div class="gap"></div>
+
+      <div class="body" style="margin-top:0;">
         <p>Вас ждут сильные эксперты, практические кейсы и ответы на ваши вопросы. Разобрать свой вопрос можно и на форуме, и ещё месяц после — участники остаются на связи. Полная программа — на SKAZBUH.RU.</p>
       </div>
+
+      <div class="gap"></div>
 
       <div class="callout">
         <img class="cic" src="file:///home/user/design-system/conference-skazbuh/print/bokaly-black.png" alt="">
@@ -153,9 +163,11 @@
         <img src="file:///home/user/design-system/conference-skazbuh/print/qr-skazbuh.png" alt="QR-код на сайт SKAZBUH.RU">
       </div>
 
+      <div class="gap" style="flex-grow:1.15"></div>
+
       <div class="closing">Ждём вас 5&nbsp;ноября в театре кукол «Сказка», на форуме от «1+1».</div>
 
-      <div class="spacer"></div>
+      <div class="gap" style="flex-grow:.7"></div>
 
       <div class="foot">
         ИП Семенцова Анастасия Павловна&nbsp;&nbsp;·&nbsp;&nbsp;ОГРНИП 325220200061632<br>
