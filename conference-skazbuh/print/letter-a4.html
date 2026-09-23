@@ -18,7 +18,7 @@
      separated by the same gap (--g); program items by --gi. Tune these two
      numbers to fill the page — the rhythm stays uniform, so no region is
      denser than another (no packed top / empty bottom). */
-  :root{ --g:4.4mm; --gi:3.4mm; }
+  :root{ --g:4.0mm; --gi:3.0mm; }
 
   .page{ width:210mm; height:297mm; background:#fff; padding:11mm 15mm 11mm 15mm; }
   .frame{ height:100%; border:0.5pt solid #111; padding:8mm 10mm;
@@ -78,8 +78,12 @@
   .cta .b{ font-family:'Liberation Sans',Arial,sans-serif; font-size:10.6pt; letter-spacing:2.6pt; }
 
   /* qr */
-  .qr{ display:flex; justify-content:center; margin-top:var(--g); }
-  .qr img{ display:block; width:18mm; height:18mm; border:0; }
+  .qr{ display:flex; align-items:center; justify-content:center; gap:5mm; margin-top:var(--g); }
+  .qr img{ flex:0 0 auto; display:block; width:20mm; height:20mm; border:0; }
+  .qr .qtx{ text-align:left; }
+  .qr .qt1{ font-family:'Liberation Sans',Arial,sans-serif; font-weight:bold; font-size:9.4pt;
+            letter-spacing:.3pt; color:#111; }
+  .qr .qt2{ font-size:9pt; line-height:1.32; color:#555; margin-top:1mm; }
 
   .closing{ font-size:9.6pt; text-align:center; margin-top:var(--g); font-style:italic; }
 
@@ -87,8 +91,11 @@
      base gaps do the real spacing, so the tail never becomes a visible hole */
   .tail{ flex:1 1 auto; min-height:0; }
   .foot{ border-top:0.5pt solid #111; margin-top:var(--g); padding-top:3mm;
-         font-family:'Liberation Sans',Arial,sans-serif; font-size:8pt; color:#333;
-         text-align:center; line-height:1.5; letter-spacing:.2pt; }
+         font-family:'Liberation Sans',Arial,sans-serif; text-align:center; }
+  .foot .name{ font-size:11.5pt; font-weight:bold; color:#111; letter-spacing:.3pt; }
+  .foot .name span{ font-weight:normal; font-size:7.6pt; letter-spacing:2pt; text-transform:uppercase; color:#888; }
+  .foot .contacts{ font-size:9.8pt; color:#111; margin-top:1.2mm; letter-spacing:.3pt; }
+  .foot .addr{ font-size:8pt; color:#666; margin-top:2.2mm; letter-spacing:.2pt; }
 </style>
 </head>
 <body>
@@ -171,6 +178,10 @@
 
       <div class="qr">
         <img src="file:///home/user/design-system/conference-skazbuh/print/qr-skazbuh.png" alt="QR-код на сайт SKAZBUH.RU">
+        <div class="qtx">
+          <div class="qt1">Сайт форума</div>
+          <div class="qt2">Программа, спикеры<br>и регистрация&nbsp;— по&nbsp;QR-коду</div>
+        </div>
       </div>
 
       <div class="closing">Ждём вас 5&nbsp;ноября в театре кукол «Сказка», на форуме от «1+1».</div>
@@ -178,8 +189,9 @@
       <div class="tail"></div>
 
       <div class="foot">
-        г.&nbsp;Барнаул, ул.&nbsp;Пушкина, д.&nbsp;41, Театр кукол «Сказка»<br>
-        Контактное лицо: Татьяна Якушева, 8-913-026-17-37
+        <div class="name"><span>контактное лицо&nbsp;&nbsp;</span>Татьяна Якушева</div>
+        <div class="contacts">8-913-026-17-37&nbsp;&nbsp;&middot;&nbsp;&nbsp;t.yakusheva@1-plus-1.ru</div>
+        <div class="addr">г.&nbsp;Барнаул, ул.&nbsp;Пушкина, д.&nbsp;41, Театр кукол «Сказка»</div>
       </div>
 
     </div>
