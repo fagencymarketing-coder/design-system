@@ -68,10 +68,10 @@
   .cta .div{ width:0.6pt; height:4.6mm; background:rgba(255,255,255,.45); }
   .cta .b{ font-family:'Liberation Sans',Arial,sans-serif; font-size:10.6pt; letter-spacing:2.6pt; }
 
-  .qr{ display:flex; align-items:center; justify-content:center; margin-top:2.4mm; }
+  .qr{ display:flex; align-items:center; justify-content:center; margin:0; }
   .qr img{ display:block; width:19mm; height:19mm; border:0; }
 
-  .closing{ font-size:9.8pt; text-align:center; margin-top:2.6mm; font-style:italic; }
+  .closing{ font-size:9.8pt; text-align:center; margin-top:0; font-style:italic; }
 
   /* flexible breathing gaps — distribute leftover height evenly instead of
      pooling it into one hole above the footer */
@@ -165,11 +165,13 @@
         <span class="b">SKAZBUH.RU</span>
       </div>
 
+      <div class="gap" style="flex-grow:1"></div>
+
       <div class="qr">
         <img src="file:///home/user/design-system/conference-skazbuh/print/qr-skazbuh.png" alt="QR-код на сайт SKAZBUH.RU">
       </div>
 
-      <div class="gap" style="flex-grow:1.15"></div>
+      <div class="gap" style="flex-grow:1"></div>
 
       <div class="closing">Ждём вас 5&nbsp;ноября в театре кукол «Сказка», на форуме от «1+1».</div>
 
