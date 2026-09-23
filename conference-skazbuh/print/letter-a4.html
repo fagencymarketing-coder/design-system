@@ -13,72 +13,82 @@
   *{ margin:0; padding:0; box-sizing:border-box; }
   html,body{ background:#fff; color:#111; }
   body{ font-family:'Liberation Serif','Times New Roman',serif; -webkit-font-smoothing:antialiased; }
-  .page{
-    width:210mm; height:297mm; background:#fff; position:relative;
-    padding:10mm 15mm 9mm 15mm;
-  }
-  .frame{ border:0.5pt solid #111; height:100%; padding:6mm 8.5mm; display:flex; flex-direction:column; }
 
-  .sans{ font-family:'Liberation Sans',Arial,sans-serif; }
+  /* ONE spacing unit drives the whole vertical rhythm. Every block is
+     separated by the same gap (--g); program items by --gi. Tune these two
+     numbers to fill the page — the rhythm stays uniform, so no region is
+     denser than another (no packed top / empty bottom). */
+  :root{ --g:4.4mm; --gi:3.4mm; }
+
+  .page{ width:210mm; height:297mm; background:#fff; padding:11mm 15mm 11mm 15mm; }
+  .frame{ height:100%; border:0.5pt solid #111; padding:8mm 10mm;
+          display:flex; flex-direction:column; }
 
   /* header */
-  .logo{ display:block; width:26mm; height:auto; margin:0 auto; }
-  .eyebrow{ display:flex; align-items:center; justify-content:center; gap:5mm; margin-top:2.6mm; }
-  .eyebrow .ln{ flex:1; height:0.5pt; background:#111; max-width:29mm; }
-  .eyebrow .tx{ font-family:'Liberation Sans',Arial,sans-serif; font-size:8.2pt; letter-spacing:1.9pt;
+  .logo{ display:block; width:20mm; height:auto; margin:0 auto; }
+  .eyebrow{ display:flex; align-items:center; justify-content:center; gap:5mm; margin-top:var(--g); }
+  .eyebrow .ln{ flex:1; height:0.5pt; background:#111; max-width:28mm; }
+  .eyebrow .tx{ font-family:'Liberation Sans',Arial,sans-serif; font-size:8.2pt; letter-spacing:2pt;
                 text-transform:uppercase; white-space:nowrap; }
   .title{ font-family:'Cramaten','Liberation Sans',sans-serif; text-align:center; text-transform:uppercase;
-          font-size:30pt; line-height:0.98; letter-spacing:1pt; margin-top:2.6mm; }
+          font-size:25pt; line-height:1.0; letter-spacing:1pt; margin-top:var(--g); }
   .meta{ font-family:'Liberation Sans',Arial,sans-serif; text-align:center; font-size:8.6pt;
-         letter-spacing:1.3pt; text-transform:uppercase; margin-top:2.6mm; color:#111; }
-  .rule2{ border:0; border-top:1.2pt solid #111; margin:2.8mm 0 0 0; }
-  .rule1{ border:0; border-top:0.5pt solid #111; }
+         letter-spacing:1.5pt; text-transform:uppercase; margin-top:var(--g); }
+  .rule{ border:0; border-top:1.2pt solid #111; margin-top:var(--g); }
 
-  /* body */
-  .body{ font-size:9.8pt; line-height:1.44; margin-top:3.4mm; }
-  .body p{ margin:0 0 2.1mm 0; }
-  .body p:last-child{ margin-bottom:0; }
+  /* running text */
+  .body{ font-size:9.6pt; line-height:1.38; }
+  .body p{ margin:0; }
+  .body p + p{ margin-top:2.8mm; }
+  .body.intro{ margin-top:var(--g); }
   .hi{ font-weight:bold; }
 
-  .section{ font-family:'Liberation Sans',Arial,sans-serif; font-size:9pt; font-weight:bold;
-            letter-spacing:3pt; text-transform:uppercase; margin:0 0 5mm 0;
-            display:flex; align-items:center; gap:4.5mm; }
+  /* program */
+  .section{ font-family:'Liberation Sans',Arial,sans-serif; font-size:8.8pt; font-weight:bold;
+            letter-spacing:3pt; text-transform:uppercase; margin-top:var(--g);
+            display:flex; align-items:center; gap:5mm; }
   .section .ln{ flex:1; height:0.5pt; background:#111; }
 
-  .item{ display:flex; gap:3.6mm; margin-bottom:3mm; }
-  .item:last-of-type{ margin-bottom:0; }
-  .num{ flex:0 0 auto; width:5.8mm; height:5.8mm; border:1pt solid #111; border-radius:50%;
-        font-family:'Liberation Sans',Arial,sans-serif; font-weight:bold; font-size:8.8pt;
-        display:flex; align-items:center; justify-content:center; margin-top:0.1mm; }
-  .item .tp{ font-family:'Liberation Sans',Arial,sans-serif; font-weight:bold; font-size:9.4pt; line-height:1.22; }
-  .item .sp{ font-size:8.9pt; font-style:italic; color:#444; line-height:1.28; margin-top:0.8mm; }
+  .list{ margin-top:var(--g); }
+  .item{ display:flex; gap:4mm; }
+  .item + .item{ margin-top:var(--gi); }
+  .num{ flex:0 0 auto; width:6.2mm; height:6.2mm; border:1pt solid #111; border-radius:50%;
+        font-family:'Liberation Sans',Arial,sans-serif; font-weight:bold; font-size:9pt;
+        display:flex; align-items:center; justify-content:center; margin-top:0.2mm; }
+  .item .tp{ font-family:'Liberation Sans',Arial,sans-serif; font-weight:bold; font-size:9.5pt; line-height:1.2; }
+  .item .sp{ font-size:8.8pt; font-style:italic; color:#444; line-height:1.26; margin-top:0.8mm; }
 
-  .callout{ border:0.7pt solid #111; background:#f1f1f1; padding:3mm 4.6mm; margin:0;
+  .body.bridge{ margin-top:var(--g); }
+
+  /* highlight box */
+  .callout{ border:0.7pt solid #111; background:#f2f2f2; padding:2.8mm 4.4mm; margin-top:var(--g);
             display:flex; align-items:center; gap:5mm; }
-  .callout .cic{ flex:0 0 auto; width:11.5mm; height:auto; display:block; }
-  .callout .l1{ font-size:9.3pt; line-height:1.34; }
+  .callout .cic{ flex:0 0 auto; width:11mm; height:auto; display:block; }
+  .callout .l1{ font-size:9.3pt; line-height:1.3; }
   .callout .l2{ font-family:'Liberation Sans',Arial,sans-serif; font-weight:bold; font-size:9.4pt;
-                margin-top:1.8mm; letter-spacing:.2pt; }
+                margin-top:1.2mm; letter-spacing:.2pt; }
 
-  .cta{ background:#111; color:#fff; margin-top:0; padding:3mm 6mm; display:flex;
-        align-items:center; justify-content:center; gap:5mm; }
+  /* call to action */
+  .cta{ background:#111; color:#fff; margin-top:var(--g); padding:3.2mm 6mm; display:flex;
+        align-items:center; justify-content:center; gap:5.5mm; }
   .cta .a{ font-family:'Liberation Sans',Arial,sans-serif; font-weight:bold; font-size:10.6pt; letter-spacing:.8pt;
-           display:inline-flex; align-items:center; gap:2.6mm; }
+           display:inline-flex; align-items:center; gap:2.8mm; }
   .cta .arw{ font-size:12.5pt; line-height:0; font-weight:normal; }
-  .cta .div{ width:0.6pt; height:4.6mm; background:rgba(255,255,255,.45); }
+  .cta .div{ width:0.6pt; height:4.8mm; background:rgba(255,255,255,.45); }
   .cta .b{ font-family:'Liberation Sans',Arial,sans-serif; font-size:10.6pt; letter-spacing:2.6pt; }
 
-  .qr{ display:flex; align-items:center; justify-content:center; margin:0; }
-  .qr img{ display:block; width:19mm; height:19mm; border:0; }
+  /* qr */
+  .qr{ display:flex; justify-content:center; margin-top:var(--g); }
+  .qr img{ display:block; width:18mm; height:18mm; border:0; }
 
-  .closing{ font-size:9.8pt; text-align:center; margin-top:0; font-style:italic; }
+  .closing{ font-size:9.6pt; text-align:center; margin-top:var(--g); font-style:italic; }
 
-  /* flexible breathing gaps — distribute leftover height evenly instead of
-     pooling it into one hole above the footer */
-  .gap{ flex:1 1 0; min-height:1.5mm; }
-  .foot{ border-top:0.5pt solid #111; margin-top:3mm; padding-top:2mm;
-         font-family:'Liberation Sans',Arial,sans-serif; font-size:7.9pt; color:#333;
-         text-align:center; line-height:1.45; letter-spacing:.2pt; }
+  /* tail carries only the tiny remainder so the footer sits at the bottom;
+     base gaps do the real spacing, so the tail never becomes a visible hole */
+  .tail{ flex:1 1 auto; min-height:0; }
+  .foot{ border-top:0.5pt solid #111; margin-top:var(--g); padding-top:3mm;
+         font-family:'Liberation Sans',Arial,sans-serif; font-size:8pt; color:#333;
+         text-align:center; line-height:1.5; letter-spacing:.2pt; }
 </style>
 </head>
 <body>
@@ -93,63 +103,57 @@
 
       <div class="meta">5&nbsp;ноября&nbsp;2026&nbsp;&middot;&nbsp;г.&nbsp;Барнаул&nbsp;&middot;&nbsp;Театр&nbsp;кукол&nbsp;«Сказка»</div>
 
-      <hr class="rule2">
+      <hr class="rule">
 
-      <div class="gap" style="flex-grow:.6"></div>
-
-      <div class="body">
+      <div class="body intro">
         <p class="hi">Уважаемый(-ая) коллега!</p>
         <p>5&nbsp;ноября компания «1+1» третий год подряд собирает главных бухгалтеров края на экспертный форум. В этот раз — в театре кукол «Сказка», г.&nbsp;Барнаул.</p>
         <p>По рейтингу RAEX мы занимаем <b>37-е&nbsp;место среди 15&nbsp;000</b> бухгалтерских компаний России. А форум задумывали как обучение для своей команды — но он перерос в отраслевое событие краевого масштаба.</p>
       </div>
 
-      <div class="gap"></div>
-
       <div class="section"><span>Что разбираем</span><span class="ln"></span></div>
 
-      <div class="item">
-        <div class="num">1</div>
-        <div>
-          <div class="tp">Грань между незаконным дроблением и законным структурированием бизнеса в 2026</div>
-          <div class="sp">Владислав Каминский (Москва) — налоговый инженер, управляющий партнёр Kaminskiy,&nbsp;Ivanov&nbsp;&amp;&nbsp;Partners</div>
+      <div class="list">
+        <div class="item">
+          <div class="num">1</div>
+          <div>
+            <div class="tp">Грань между незаконным дроблением и законным структурированием бизнеса в 2026</div>
+            <div class="sp">Владислав Каминский (Москва) — налоговый инженер, управляющий партнёр Kaminskiy,&nbsp;Ivanov&nbsp;&amp;&nbsp;Partners</div>
+          </div>
         </div>
-      </div>
-      <div class="item">
-        <div class="num">2</div>
-        <div>
-          <div class="tp">Изменения и тренды налогового контроля 2027</div>
-          <div class="sp">Ольга Ефремова — начальник отдела налогового контроля № 1 УФНС России по Алтайскому краю</div>
+        <div class="item">
+          <div class="num">2</div>
+          <div>
+            <div class="tp">Изменения и тренды налогового контроля 2027</div>
+            <div class="sp">Ольга Ефремова — начальник отдела налогового контроля № 1 УФНС России по Алтайскому краю</div>
+          </div>
         </div>
-      </div>
-      <div class="item">
-        <div class="num">3</div>
-        <div>
-          <div class="tp">Требования ИФНС: автоматизация ответов с помощью ИИ</div>
-          <div class="sp">Юрий Марков — «Центр налоговых решений КМК»</div>
+        <div class="item">
+          <div class="num">3</div>
+          <div>
+            <div class="tp">Требования ИФНС: автоматизация ответов с помощью ИИ</div>
+            <div class="sp">Юрий Марков — «Центр налоговых решений КМК»</div>
+          </div>
         </div>
-      </div>
-      <div class="item">
-        <div class="num">4</div>
-        <div>
-          <div class="tp">Изменения в налоговом и бухгалтерском учёте, подготовка к закрытию года 2026–2027</div>
-          <div class="sp">Эксперты «1+1»</div>
+        <div class="item">
+          <div class="num">4</div>
+          <div>
+            <div class="tp">Изменения в налоговом и бухгалтерском учёте, подготовка к закрытию года 2026–2027</div>
+            <div class="sp">Эксперты «1+1»</div>
+          </div>
         </div>
-      </div>
-      <div class="item">
-        <div class="num">5</div>
-        <div>
-          <div class="tp">Пленарная сессия «ИИ и цифровая трансформация профессии бухгалтера»</div>
-          <div class="sp">Руководители компаний с кейсами внедрения ИИ в учёте, представители IT-компаний и эксперты по автоматизации учёта</div>
+        <div class="item">
+          <div class="num">5</div>
+          <div>
+            <div class="tp">Пленарная сессия «ИИ и цифровая трансформация профессии бухгалтера»</div>
+            <div class="sp">Руководители компаний с кейсами внедрения ИИ в учёте, представители IT-компаний и эксперты по автоматизации учёта</div>
+          </div>
         </div>
       </div>
 
-      <div class="gap"></div>
-
-      <div class="body" style="margin-top:0;">
+      <div class="body bridge">
         <p>Вас ждут сильные эксперты, практические кейсы и ответы на ваши вопросы. Разобрать свой вопрос можно и на форуме, и ещё месяц после — участники остаются на связи. Полная программа — на SKAZBUH.RU.</p>
       </div>
-
-      <div class="gap"></div>
 
       <div class="callout">
         <img class="cic" src="file:///home/user/design-system/conference-skazbuh/print/bokaly-black.png" alt="">
@@ -165,17 +169,13 @@
         <span class="b">SKAZBUH.RU</span>
       </div>
 
-      <div class="gap" style="flex-grow:1"></div>
-
       <div class="qr">
         <img src="file:///home/user/design-system/conference-skazbuh/print/qr-skazbuh.png" alt="QR-код на сайт SKAZBUH.RU">
       </div>
 
-      <div class="gap" style="flex-grow:1"></div>
-
       <div class="closing">Ждём вас 5&nbsp;ноября в театре кукол «Сказка», на форуме от «1+1».</div>
 
-      <div class="gap" style="flex-grow:.7"></div>
+      <div class="tail"></div>
 
       <div class="foot">
         ИП Семенцова Анастасия Павловна&nbsp;&nbsp;·&nbsp;&nbsp;ОГРНИП 325220200061632<br>
