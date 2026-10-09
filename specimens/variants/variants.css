@@ -1,0 +1,21 @@
+/* Три варианта доработки серии. Подключаются поверх base.css классом на body: vA, vB, vC. */
+
+/* A · Чистка: меняем только то, что выбивалось. Остальное как в утверждённой серии. */
+/* (V7 без фактуры, подставляется отдельно в сборщике) */
+
+/* B · Тише: меньше логотип, больше поля, заголовок на ступень легче */
+.vB .logo,.vC .logo{width:158px;left:112px;top:104px}
+.vB .text-top,.vC .text-top{left:112px;right:112px;top:262px}
+.vB .text-mid,.vC .text-mid{left:112px;right:112px}
+.vB .dash,.vC .dash{width:56px;height:3px;margin-bottom:34px}
+.vB .label,.vC .label{letter-spacing:.2em;font-size:21px}
+.vB .h-s,.vB .h-m,.vB .h-l,.vB .h-t,
+.vC .h-s,.vC .h-m,.vC .h-l,.vC .h-t{font-weight:500}
+.vB .h-l,.vC .h-l{letter-spacing:-.04em}
+.vB .by,.vC .by{left:112px;bottom:112px}
+.vB .photo,.vC .photo{left:112px;right:112px}
+.vB li::before,.vC li::before{font-weight:600}
+
+/* C · Рамка: B + тонкая линия-рамка по периметру, уходит под фото */
+.vC .canvas::before{content:"";position:absolute;inset:40px;border:1.5px solid #D4D3CF;z-index:0;pointer-events:none}
+.vC .canvas.dark::before{border-color:rgba(255,255,255,.34)}
