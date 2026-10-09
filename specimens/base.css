@@ -10,8 +10,8 @@
   --champagne:#D2BE8C; --crimson:#D73A61; --olive:#807A4A;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{width:1080px;height:1350px;background:#fff}
+html,body{width:1080px;height:1080px;background:#fff}
 body{font-family:Gilroy,'Montserrat',sans-serif;-webkit-font-smoothing:antialiased}
-.canvas{position:relative;width:1080px;height:1350px;overflow:hidden}
+.canvas{position:relative;width:1080px;height:1080px;overflow:hidden}
 .logo{position:absolute;left:96px;top:96px;height:auto;display:block}
 .abs{position:absolute}
