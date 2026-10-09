@@ -10,8 +10,8 @@
    - `logo.png`, `logo-full.png`, `logo-full-white.png`, `logo-mark-white.png`;
    - `pattern-2.png`, `badge-round.png` (`pattern-1.png` только для печати);
    - папку `assets/team/` (36 фото), её описание: `docs/team-photos.md`.
-4. **Эталоны**: добавить `specimens/tax.png`, `tax-plain.png`, `law.png`, `law-olive.png`, `digits.png` как референсы
-   качества (не как шаблоны для копирования).
+4. **Каталог**: добавить `docs/layout-catalog.md` и все PNG из `specimens/` (`v1a…v9`, `catalog.png`).
+   Claude Design выбирает один из девяти вариантов под задачу. Добавить `assets/experts/` (портреты-вырезки).
 5. **Проверка**: попросить Claude Design собрать новый пост по рецепту R1–R6 и прогнать его
    по чек-листу из раздела 14.
 
