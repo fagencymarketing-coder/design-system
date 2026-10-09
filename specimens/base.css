@@ -1,0 +1,17 @@
+/* Стили образцов v2. Gilroy лежит в assets/fonts/ (не в git, лицензия). */
+@font-face{font-family:Gilroy;font-weight:300;src:url(../assets/fonts/Gilroy-Light.ttf)}
+@font-face{font-family:Gilroy;font-weight:400;src:url(../assets/fonts/Gilroy-Regular.ttf)}
+@font-face{font-family:Gilroy;font-weight:500;src:url(../assets/fonts/Gilroy-Medium.ttf)}
+@font-face{font-family:Gilroy;font-weight:600;src:url(../assets/fonts/Gilroy-Semibold.ttf)}
+@font-face{font-family:Gilroy;font-weight:700;src:url(../assets/fonts/Gilroy-Bold.ttf)}
+@font-face{font-family:Gilroy;font-weight:800;src:url(../assets/fonts/Gilroy-Extrabold.ttf)}
+:root{
+  --paper:#F7F5F1; --white:#fff; --graphite:#1C1A17; --stone:#6F695F; --sand:#DDD5C8;
+  --champagne:#D2BE8C; --crimson:#D73A61; --olive:#807A4A;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1350px;background:#fff}
+body{font-family:Gilroy,'Montserrat',sans-serif;-webkit-font-smoothing:antialiased}
+.canvas{position:relative;width:1080px;height:1350px;overflow:hidden}
+.logo{position:absolute;left:96px;top:96px;height:auto;display:block}
+.abs{position:absolute}
