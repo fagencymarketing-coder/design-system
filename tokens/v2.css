@@ -1,11 +1,11 @@
 /* 1+1 Design System v2 — токены. Подробности в docs/readme-v2.md */
 :root{
   /* цвет */
-  --paper:#F7F5F1;
+  --paper:#F9F9F8;
   --white:#FFFFFF;
   --graphite:#1C1A17;
-  --stone:#6F695F;
-  --sand:#DDD5C8;
+  --stone:#6A6965;
+  --sand:#E3E2DE;
   --champagne:#D2BE8C;
   --crimson:#D73A61;          /* акцент: слово, цифра, черта, плашка */
   --crimson-on-dark:#EA4C74;  /* тот же акцент на графите */
