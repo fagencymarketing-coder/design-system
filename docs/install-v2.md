@@ -10,7 +10,7 @@
    - `logo.png`, `logo-full.png`, `logo-full-white.png`, `logo-mark-white.png`;
    - `pattern-2.png`, `badge-round.png` (`pattern-1.png` только для печати);
    - папку `assets/team/` (36 фото), её описание: `docs/team-photos.md`.
-4. **Эталоны**: добавить `specimens/tax.png`, `law.png`, `law-olive.png`, `digits.png` как референсы
+4. **Эталоны**: добавить `specimens/tax.png`, `tax-plain.png`, `law.png`, `law-olive.png`, `digits.png` как референсы
    качества (не как шаблоны для копирования).
 5. **Проверка**: попросить Claude Design собрать новый пост по рецепту R1–R6 и прогнать его
    по чек-листу из раздела 14.
