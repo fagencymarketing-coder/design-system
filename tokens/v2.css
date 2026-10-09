@@ -1,7 +1,8 @@
 /* 1+1 Design System v2 — токены. Подробности в docs/readme-v2.md */
 :root{
   /* цвет */
-  --paper:#F9F9F8;
+  --paper-solid:#F6F6F5;      /* плоский вариант, когда градиент неуместен (карточки, печать) */
+  --paper:linear-gradient(180deg,#ECECEB 0%,#F4F4F3 50%,#FBFBFA 100%); /* студийный светлый фон */
   --white:#FFFFFF;
   --graphite:#1C1A17;
   --stone:#6A6965;
