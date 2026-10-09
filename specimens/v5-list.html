@@ -2,6 +2,7 @@
 <link rel="stylesheet" href="base.css">
 <style>
 .canvas{background:var(--paper)}
+.brandmark{position:absolute;right:-70px;bottom:-70px;width:520px;height:520px;background:var(--olive-bright);opacity:.22;-webkit-mask:url(../assets/icons/gavel.svg) center/contain no-repeat;mask:url(../assets/icons/gavel.svg) center/contain no-repeat}
 .logo{width:196px}
 .text{position:absolute;left:96px;right:96px;top:262px;color:var(--graphite)}
 h1{font-weight:600;font-size:100px;line-height:1.04;letter-spacing:-.02em}
@@ -10,6 +11,7 @@ li{display:flex;align-items:baseline;gap:26px;font-weight:400;font-size:34px;lin
 li::before{content:'+';flex:none;width:30px;font-weight:700;font-size:44px;line-height:1;color:var(--crimson)}
 </style></head><body>
 <div class="canvas">
+  <div class="brandmark"></div>
   <img class="logo" src="../assets/logo-full.png" alt="">
   <div class="text">
     <h1>Юридическое<br>обслуживание</h1>

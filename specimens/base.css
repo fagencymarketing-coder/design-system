@@ -7,7 +7,7 @@
 @font-face{font-family:Gilroy;font-weight:800;src:url(../assets/fonts/Gilroy-Extrabold.ttf)}
 :root{
   --paper-solid:#F6F6F5; --paper:linear-gradient(180deg,#ECECEB 0%,#F4F4F3 50%,#FBFBFA 100%); --white:#fff; --graphite:#1C1A17; --stone:#6A6965; --sand:#E3E2DE;
-  --champagne:#D2BE8C; --crimson:#D73A61; --olive:#807A4A;
+  --champagne:#D2BE8C; --crimson:#D73A61; --olive:#807A4A; --olive-bright:#ABAD58;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{width:1080px;height:1080px;background:#fff}
