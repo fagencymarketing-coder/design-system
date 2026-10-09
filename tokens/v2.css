@@ -1,0 +1,34 @@
+/* 1+1 Design System v2 — токены. Подробности в docs/readme-v2.md */
+:root{
+  /* цвет */
+  --paper:#F7F5F1;
+  --white:#FFFFFF;
+  --graphite:#1C1A17;
+  --stone:#6F695F;
+  --sand:#DDD5C8;
+  --champagne:#D2BE8C;
+  --crimson:#D73A61;          /* акцент: слово, цифра, черта, плашка */
+  --crimson-on-dark:#EA4C74;  /* тот же акцент на графите */
+  --olive:#807A4A;
+  --olive-bright:#ABAD58;
+  --olive-field:#8E903C;      /* фирменный зелёный: фон на весь холст */
+  --olive-field-top:#9A9C48;
+  --olive-field-bottom:#82842F;
+  --olive-field-gradient:linear-gradient(180deg,var(--olive-field-top) 0%,var(--olive-field-bottom) 100%);
+
+  /* шрифт */
+  --font:'Gilroy','Montserrat',sans-serif;
+
+  /* шкала на квадрате 1080 */
+  --fs-hero-number:250px;   /* 240–400 */
+  --fs-headline:122px;      /* 106–160 */
+  --fs-sub:44px;            /* 42–54 */
+  --fs-text:30px;           /* 28–34 */
+  --fs-label:22px;          /* 22–24, капс, +14% */
+
+  /* формы */
+  --r-plate:14px;
+  --r-card:12px;
+  --r-photo:8px;
+  --margin:96px;            /* поле на квадрате 1080 */
+}
