@@ -1,0 +1,19 @@
+[
+ {"name":"V01-photo-question","html":"specimens/v1-photo-question.html"},
+ {"name":"V13-photo-hero-question","html":"specimens/v13-photo-hero-question.html"},
+ {"name":"V02-news-graphite","html":"specimens/v2-news-graphite.html"},
+ {"name":"V14-graphite-hero-question","html":"specimens/v14-graphite-hero-question.html"},
+ {"name":"V03-news-green","html":"specimens/v3-news-green.html"},
+ {"name":"V05-list","html":"specimens/v5-list.html"},
+ {"name":"V06-team","html":"specimens/v6-team.html"},
+ {"name":"V08-fragment","html":"specimens/v8-fragment.html"},
+ {"name":"V09-case","html":"specimens/v9-case.html"},
+ {"name":"V11-photo-frame","html":"specimens/v11-photo-frame.html"},
+ {"name":"V12-word-graphite","html":"specimens/v12-word-graphite.html"},
+ {"name":"U1-urgent-air-pink","html":"specimens/work/urgent-eter-pink.html"},
+ {"name":"U2-urgent-air-green","html":"specimens/work/urgent-eter-green.html"},
+ {"name":"U3-urgent-date-graphite-chip","html":"specimens/work/urgent-chip-graphite.html"},
+ {"name":"U4-urgent-date-crimson-chip","html":"specimens/work/urgent-chip-crimson.html"},
+ {"name":"U5-urgent-newspaper","html":"specimens/work/urgent-newspaper.html"},
+ {"name":"U6-urgent-ticker-quiet","html":"specimens/work/urgent-ticker-quiet.html","keep":[".tick"]}
+]
