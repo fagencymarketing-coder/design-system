@@ -108,8 +108,8 @@
   "html": "specimens/work/urgent-newspaper.html"
  },
  {
-  "name": "U6-urgent-ticker-quiet",
-  "html": "specimens/work/urgent-ticker-quiet.html",
+  "name": "U6-urgent-ticker-green",
+  "html": "specimens/work/urgent-ticker-green.html",
   "keep": [
    ".tick"
   ]
