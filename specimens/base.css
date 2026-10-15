@@ -30,3 +30,5 @@ body{font-family:Gilroy,'Montserrat',sans-serif;-webkit-font-smoothing:antialias
 .text-top{position:absolute;left:96px;right:96px;top:248px}
 .text-mid{position:absolute;left:96px;right:96px;top:55%;transform:translateY(-50%)}
 .plate{display:inline-block;background:var(--crimson);color:#fff;border-radius:16px}
+
+:root{--olive-field-gradient:linear-gradient(180deg,#9A9C48 0%,#82842F 100%)}
