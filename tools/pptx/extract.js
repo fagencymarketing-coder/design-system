@@ -11,8 +11,8 @@ const LAYOUTS=JSON.parse(fs.readFileSync(path.join(__dirname,'layouts.json'),'ut
     const p=await b.newPage({viewport:{width:1080,height:1080}});
     await p.goto('file://'+path.join(root,L.html));
     await p.evaluate(()=>document.fonts.ready); await p.waitForTimeout(500);
-    const data=await p.evaluate((keep)=>{
-      const res={imgs:[],dashes:[],texts:[]};
+    const data=await p.evaluate(([keep,slots])=>{
+      const res={imgs:[],dashes:[],texts:[],slots:[]};
       const isKept=el=>keep.some(s=>el.closest(s));
       document.querySelectorAll('img').forEach(im=>{const r=im.getBoundingClientRect();res.imgs.push({src:im.src,x:r.left,y:r.top,w:r.width,h:r.height,logo:/logo/.test(im.src)});});
       document.querySelectorAll('.dash').forEach(el=>{const r=el.getBoundingClientRect();res.dashes.push({x:r.left,y:r.top,w:r.width,h:r.height,color:getComputedStyle(el).backgroundColor});});
@@ -55,12 +55,30 @@ const LAYOUTS=JSON.parse(fs.readFileSync(path.join(__dirname,'layouts.json'),'ut
         if(c&&c!=='none'&&c!=='normal'){const r=li.getBoundingClientRect();
           res.texts.push({marker:true,text:c.replace(/^["']|["']$/g,''),x:r.left,y:r.top,color:ps.color,size:parseFloat(ps.fontSize),weight:parseInt(ps.fontWeight),lh:parseFloat(li.style.lineHeight)||parseFloat(getComputedStyle(li).lineHeight)});}
       });
+      for(const sl of slots){
+        const el=document.querySelector(sl.selector); if(!el)continue;
+        const cs=getComputedStyle(el), r=el.getBoundingClientRect();
+        const bi=(cs.backgroundImage.match(/url\("?([^")]+)"?\)/)||[])[1];
+        const mk=(cs.webkitMaskImage||cs.maskImage||'');
+        const mi=(mk.match(/url\("?([^")]+)"?\)/)||[])[1];
+        res.slots.push({kind:sl.kind,selector:sl.selector,bg:sl.bg||false,name:sl.name,x:r.left,y:r.top,w:r.width,h:r.height,
+          src:bi||null,pos:cs.backgroundPosition,size:cs.backgroundSize,radius:parseFloat(cs.borderTopLeftRadius)||0,
+          color:cs.backgroundColor,opacity:parseFloat(cs.opacity),mask:mi||null,fade:sl.fade||null,saturate:sl.saturate||null});
+      }
       return res;
-    },L.keep||[]);
+    },[L.keep||[],L.slots||[]]);
     // фон: прячем текст, логотипы, картинки, черты
     const sel=(L.keep||[]).map(k=>':not('+k+'):not('+k+' *)').join('');
-    await p.addStyleTag({content:'*'+sel+'{color:transparent!important;-webkit-text-stroke:0!important;text-shadow:none!important} img,.dash{visibility:hidden!important} li::before{color:transparent!important}'});
-    await p.screenshot({path:path.join(__dirname,'out',L.name+'-bg.png')});
+    let hideCss='html,body{background:transparent!important} *:not(#_)'+sel+'{color:transparent!important;-webkit-text-stroke:0!important;text-shadow:none!important} img,.dash{visibility:hidden!important} li::before{color:transparent!important}';
+    for(const sl of (L.slots||[])) hideCss+= sl.bg ? (sl.selector+'{background:none!important}') : (sl.selector+'{visibility:hidden!important}');
+    await p.addStyleTag({content:hideCss});
+    await p.screenshot({path:path.join(__dirname,'out',L.name+'-bg.png'),omitBackground:true});
+    for(const sl of data.slots){ if(sl.kind!=='icon'||!sl.mask)continue;
+      const q=await b.newPage({viewport:{width:Math.ceil(sl.w),height:Math.ceil(sl.h)}});
+      fs.writeFileSync(path.join(__dirname,'out','_icon.html'),'<html><body style="margin:0;background:transparent"><div style="width:'+sl.w+'px;height:'+sl.h+'px;background:'+sl.color+';opacity:'+sl.opacity+';-webkit-mask:url('+sl.mask+') center/contain no-repeat;mask:url('+sl.mask+') center/contain no-repeat"></div></body></html>');
+      await q.goto('file://'+path.join(__dirname,'out','_icon.html'));
+      await q.waitForTimeout(400);
+      const fn=path.join(__dirname,'out',L.name+'-icon.png'); await q.screenshot({path:fn,omitBackground:true}); sl.png=fn; await q.close(); }
     out[L.name]=data;
     await p.close();
   }
