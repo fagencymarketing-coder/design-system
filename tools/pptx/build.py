@@ -11,6 +11,8 @@ from pptx.oxml.ns import qn
 from lxml import etree
 
 HERE=os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0,HERE)
+from fix_layouts import fix_layouts
 OUT=os.path.join(HERE,'out')
 PX=9525
 DY=float(os.environ.get('DY','0'))
@@ -177,6 +179,7 @@ def build(names,dst):
             add_text(s,t,i+1,bgim)
         # заметки
         s.notes_slide.notes_text_frame.text='Шаблон. Текст-«рыба» заменяется своим. Фото и иконки: выделить, правая кнопка → Изменить рисунок. Шрифт Gilroy встроен в файл.'
+    fix_layouts(prs)
     prs.save(dst)
 
 
