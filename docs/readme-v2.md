@@ -420,8 +420,8 @@ Gilroy — единственный шрифт. Файлы Light–Extrabold в 
 
 ## 13. Иконки
 
-**Набор бренда** — 8 сплошных иконок в малиновом (`assets/icons/`): `document`, `ruble-badge`, `pin`,
-`calculator`, `gavel`, `gear`, `arrows`, `notebook`. SVG, цвет `currentColor`, вырезы настоящие
+**Набор бренда** — 9 сплошных иконок в малиновом (`assets/icons/`): `document`, `ruble-badge`, `pin`,
+`calculator`, `gavel`, `gear`, `arrows`, `megaphone`, `notebook`. SVG, цвет `currentColor`, вырезы настоящие
 (`evenodd`). Размер 24–96 px как иконка, 500–700 px как водяной знак (раздел 5.1). Смысл иконок в таблице
 5.1. Новые не изобретать, сторонние библиотеки и эмодзи не подключать. Нужна иконка вне набора — спросить.
 
