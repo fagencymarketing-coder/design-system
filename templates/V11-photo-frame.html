@@ -1,0 +1,10 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><title>V11 · Заголовок и фото в рамке</title>
+<link rel="stylesheet" href="base.css">
+<style>.photo{position:absolute;left:96px;right:96px;bottom:96px;height:470px;border-radius:8px;background:var(--photo) center 40%/cover;filter:saturate(.88)}
+.mark{right:-140px;top:-170px;width:400px;height:400px}</style></head><body>
+<div class="canvas paper"><div class="mark" data-slot="mark" style="--mark:url(../assets/icons/gear.svg)"></div>
+<img class="logo" src="../assets/logo-full.png" alt="">
+<div class="text-top"><div class="dash"></div>
+<div class="h-s" data-slot="title" data-fit data-sizes="62,56,50" data-max-lines="3" style="font-size:60px">Здесь заголовок<br>в три строки, последняя<br>строка с <em class="acc">акцентом</em></div></div>
+<div class="photo" data-slot="photo" style="--photo:url(../assets/team/color-0768.jpg)"></div></div>
+<script src="fit.js"></script></body></html>
