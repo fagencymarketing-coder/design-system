@@ -284,5 +284,31 @@
   "status": "отклонён",
   "note": "выбран кадр 0289",
   "file": "examples/ooo-ip-v1c.png"
+ },
+ {
+  "id": "2026-10-21-06",
+  "date": "2026-10-21",
+  "topic": "Форум «Сказочная бухгалтерия» 5 ноября 2026",
+  "template": "E1 анонс",
+  "register": "фирменная айдентика форума (фиолетовый)",
+  "photo": "event/girl-abacus",
+  "accent": "PRO (светло-сиреневый)",
+  "watermark": "ornament",
+  "status": "предложен",
+  "note": "вариант А: в айдентике форума",
+  "file": "examples/forum-a.png"
+ },
+ {
+  "id": "2026-10-21-07",
+  "date": "2026-10-21",
+  "topic": "Форум «Сказочная бухгалтерия» 5 ноября 2026",
+  "template": "E1 анонс",
+  "register": "светлый",
+  "photo": "event/girl-abacus",
+  "accent": "PRO (малиновый)",
+  "watermark": "",
+  "status": "предложен",
+  "note": "вариант Б: в стиле 1+1",
+  "file": "examples/forum-b.png"
  }
 ]
