@@ -255,9 +255,9 @@
   "photo": "team/square/concrete-0289-sq",
   "accent": "черта",
   "watermark": "",
-  "status": "предложен",
-  "note": "хороший; кроп доработан: люди видны по пояс (заголовок 80)",
-  "file": "examples/ooo-ip-v1b.png"
+  "status": "утверждён",
+  "note": "эталон V1 с кадром 0289: люди по пояс, заголовок 80, подзаголовок 40",
+  "file": "specimens/v1-photo-heading-0289.png"
  },
  {
   "id": "2026-10-21-21",
@@ -281,8 +281,8 @@
   "photo": "team/square/concrete-0244-sq",
   "accent": "черта",
   "watermark": "",
-  "status": "предложен",
-  "note": "альтернативный кадр, люди целиком до стола",
+  "status": "отклонён",
+  "note": "выбран кадр 0289",
   "file": "examples/ooo-ip-v1c.png"
  }
 ]
