@@ -388,5 +388,18 @@
   "status": "предложен",
   "note": "forum-c-peek",
   "file": "examples/forum-c-peek.png"
+ },
+ {
+  "id": "2026-10-21-14",
+  "date": "2026-10-21",
+  "topic": "Форум «Сказочная бухгалтерия», квадрат в стиле 1+1",
+  "template": "E1",
+  "register": "светлый",
+  "photo": "event/girl-abacus",
+  "accent": "PRO в красных плашках #D6001F",
+  "watermark": "",
+  "status": "предложен",
+  "note": "forum-e: девочка выглядывает, темы крупнее. Плашки PRO — по просьбе заказчика, только для форума",
+  "file": "examples/forum-e.png"
  }
 ]
