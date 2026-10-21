@@ -583,5 +583,44 @@
   "status": "предложен",
   "note": "support-c (весь текст графит), support-c2 (заголовок белый, пояснение графит)",
   "file": "examples/support-c.png"
+ },
+ {
+  "id": "2026-10-21-29",
+  "date": "2026-10-21",
+  "topic": "Точечная поддержка бизнеса в Алтайском крае: гранты, субсидии…",
+  "template": "V10",
+  "register": "светлый",
+  "photo": "team/plaster-0347",
+  "accent": "фото справа, текст слева",
+  "watermark": "",
+  "status": "предложен",
+  "note": "support-d",
+  "file": "examples/support-d.png"
+ },
+ {
+  "id": "2026-10-21-30",
+  "date": "2026-10-21",
+  "topic": "Точечная поддержка бизнеса в Алтайском крае: гранты, субсидии…",
+  "template": "V11",
+  "register": "светлый",
+  "photo": "",
+  "accent": "типографика, слово «поддержка» акцентом, водяной знак рубль",
+  "watermark": "",
+  "status": "предложен",
+  "note": "support-e",
+  "file": "examples/support-e.png"
+ },
+ {
+  "id": "2026-10-21-31",
+  "date": "2026-10-21",
+  "topic": "Точечная поддержка бизнеса в Алтайском крае: гранты, субсидии…",
+  "template": "V6",
+  "register": "светлый",
+  "photo": "team/plaster-0331",
+  "accent": "команда растворяется в фон",
+  "watermark": "",
+  "status": "предложен",
+  "note": "support-f",
+  "file": "examples/support-f.png"
  }
 ]
