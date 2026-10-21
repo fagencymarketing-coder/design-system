@@ -622,5 +622,18 @@
   "status": "отклонён",
   "note": "support-f; тема не про услуги компании, фото команды не подходит",
   "file": "examples/support-f.png"
+ },
+ {
+  "id": "2026-10-21-32",
+  "date": "2026-10-21",
+  "topic": "Точечная поддержка бизнеса в Алтайском крае: гранты, субсидии… (водяной знак)",
+  "template": "V11",
+  "register": "светлый",
+  "photo": "",
+  "accent": "поддержка",
+  "watermark": "marks/ruble-heavy, icons/pin",
+  "status": "предложен",
+  "note": "support-e1 графит .07, e2 шампань, e3 оливковый, e4 метка-пин шампань",
+  "file": "examples/support-e2.png"
  }
 ]
