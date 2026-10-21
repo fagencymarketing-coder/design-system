@@ -607,7 +607,7 @@
   "accent": "типографика, слово «поддержка» акцентом, водяной знак рубль",
   "watermark": "",
   "status": "утверждён",
-  "note": "support-e: эталон типографического макета (V11 без фото, акцент «поддержка», водяной знак рубль)",
+  "note": "support-e: основа, заменена эталоном support-e4",
   "file": "examples/support-e.png"
  },
  {
@@ -631,9 +631,9 @@
   "register": "светлый",
   "photo": "",
   "accent": "поддержка",
-  "watermark": "marks/ruble-heavy, icons/pin",
-  "status": "предложен",
-  "note": "support-e1 графит .07, e2 шампань, e3 оливковый, e4 метка-пин шампань",
-  "file": "examples/support-e2.png"
+  "watermark": "icons/pin (шампань)",
+  "status": "утверждён",
+  "note": "support-e4: ЭТАЛОН типографического макета с пином-меткой; e1–e3 (рубль) не выбраны",
+  "file": "examples/support-e4.png"
  }
 ]
