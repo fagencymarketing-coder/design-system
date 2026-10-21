@@ -568,7 +568,7 @@
   "accent": "вопрос",
   "watermark": "",
   "status": "предложен",
-  "note": "support-c; без «Как получить?»",
+  "note": "support-c (весь текст графит), support-c2 (заголовок белый, пояснение графит)",
   "file": "examples/support-c.png"
  },
  {
@@ -581,7 +581,7 @@
   "accent": "графит",
   "watermark": "",
   "status": "предложен",
-  "note": "support-c (весь текст графит), support-c2 (заголовок графит, пояснение белым)",
+  "note": "support-c (весь текст графит), support-c2 (заголовок белый, пояснение графит)",
   "file": "examples/support-c.png"
  }
 ]
