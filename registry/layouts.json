@@ -401,5 +401,57 @@
   "status": "предложен",
   "note": "forum-e: девочка выглядывает, темы крупнее. Плашки PRO — по просьбе заказчика, только для форума",
   "file": "examples/forum-e.png"
+ },
+ {
+  "id": "2026-10-21-15",
+  "date": "2026-10-21",
+  "topic": "Форум «Сказочная бухгалтерия», квадрат без иконок",
+  "template": "E1",
+  "register": "светлый, плашки PRO",
+  "photo": "event/girl-abacus",
+  "accent": "PRO",
+  "watermark": "",
+  "status": "предложен",
+  "note": "forum-f: темы 54 px, девочка только голова и плечи в углу",
+  "file": "examples/forum-f.png"
+ },
+ {
+  "id": "2026-10-21-16",
+  "date": "2026-10-21",
+  "topic": "Форум «Сказочная бухгалтерия», квадрат без иконок",
+  "template": "E1",
+  "register": "кремовый, линии",
+  "photo": "event/girl-abacus",
+  "accent": "PRO",
+  "watermark": "",
+  "status": "предложен",
+  "note": "forum-g: вордмарк форума, список с тонкими линиями, без плашек",
+  "file": "examples/forum-g.png"
+ },
+ {
+  "id": "2026-10-21-17",
+  "date": "2026-10-21",
+  "topic": "Форум «Сказочная бухгалтерия», квадрат без иконок",
+  "template": "E1",
+  "register": "фиолетовый, линии",
+  "photo": "event/girl-abacus",
+  "accent": "PRO",
+  "watermark": "",
+  "status": "предложен",
+  "note": "forum-h: вордмарк форума, список с линиями",
+  "file": "examples/forum-h.png"
+ },
+ {
+  "id": "2026-10-21-18",
+  "date": "2026-10-21",
+  "topic": "Форум «Сказочная бухгалтерия», квадрат без иконок",
+  "template": "E1",
+  "register": "светлый + фиолетовая панель",
+  "photo": "event/girl-abacus",
+  "accent": "PRO",
+  "watermark": "",
+  "status": "предложен",
+  "note": "forum-i: темы на панели, девочка выглядывает из-за её края",
+  "file": "examples/forum-i.png"
  }
 ]
