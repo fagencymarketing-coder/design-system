@@ -3,7 +3,8 @@
   registry.py report                         пересобрать registry/LOG.md
   registry.py add "Тема" V2 графит --photo X --accent слово --mark Y [--note ...] [--file ...]
   registry.py status <id> утверждён|отклонён|опубликован|снят [--note ...]
-  registry.py suggest [--last 8]            что недавно использовано: фото, шаблоны, регистры (чего избегать)"""
+  registry.py suggest [--last 8]            что недавно использовано: фото, шаблоны, регистры (чего избегать)
+  registry.py unused                        фото из библиотеки assets/team, которых ещё нет в журнале (брать только их)"""
 import json, sys, os, datetime, collections, argparse
 P=os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','registry')
 J=os.path.join(P,'layouts.json')
@@ -29,6 +30,14 @@ def suggest(n):
 if __name__=='__main__':
     a=sys.argv[1:]; cmd=a[0] if a else 'report'
     if cmd=='report': report(); print('LOG.md обновлён')
+    elif cmd=='unused':
+        import re,glob
+        used={m.group(1)+'-'+m.group(2) for x in load() for m in [re.search(r'(concrete|plaster|studio|color|office)-(\d+)',x['photo'] or '')] if m}
+        root=os.path.join(P,'..','assets','team')
+        free=sorted(os.path.basename(f)[:-4] for f in glob.glob(os.path.join(root,'*.jpg')))
+        print('Использованы за всё время:',', '.join(sorted(used)))
+        print('Свободны:',', '.join(f for f in free if f not in used))
+        print('Внимание: кадры одной сцены (concrete-0244/0253, 0259/0265/0267/0269, 0283/0289, 0297/0302) выглядят как повтор, берите другую сцену.')
     elif cmd=='suggest':
         ap=argparse.ArgumentParser(); ap.add_argument('--last',type=int,default=8); suggest(ap.parse_args(a[1:]).last)
     elif cmd=='add':
