@@ -310,5 +310,31 @@
   "status": "предложен",
   "note": "вариант Б: в стиле 1+1",
   "file": "examples/forum-b.png"
+ },
+ {
+  "id": "2026-10-21-08",
+  "date": "2026-10-21",
+  "topic": "Форум «Сказочная бухгалтерия», квадрат с иконками форума",
+  "template": "E1",
+  "register": "фирменная айдентика форума (фиолетовый)",
+  "photo": "event/girl-abacus",
+  "accent": "PRO (сиреневый)",
+  "watermark": "event/icons",
+  "status": "предложен",
+  "note": "вариант C: иконки из PDF форума как маркеры тем",
+  "file": "examples/forum-c.png"
+ },
+ {
+  "id": "2026-10-21-09",
+  "date": "2026-10-21",
+  "topic": "Форум «Сказочная бухгалтерия», квадрат с иконками форума",
+  "template": "E1",
+  "register": "кремовый, цвета форума",
+  "photo": "event/girl-abacus",
+  "accent": "PRO (красный #D6001F)",
+  "watermark": "event/icons",
+  "status": "предложен",
+  "note": "вариант D: кремовый фон, красные и сиреневые иконки",
+  "file": "examples/forum-d.png"
  }
 ]
