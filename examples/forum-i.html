@@ -1,29 +1,23 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><title>Форум I</title>
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><title>forum-i</title>
 <link rel="stylesheet" href="../templates/base.css"><style>
-.eyebrow{position:absolute;left:96px;font-weight:600;font-size:26px;letter-spacing:.16em;text-transform:uppercase}
-.dash2{position:absolute;left:96px;width:64px;height:4px}
-.wm{position:absolute;left:96px;-webkit-mask:url(../assets/event/wordmark-skazochnaya-buhgalteriya.png) left center/contain no-repeat;mask:url(../assets/event/wordmark-skazochnaya-buhgalteriya.png) left center/contain no-repeat}
-.topics{position:absolute;left:96px;list-style:none}
-.topics li{display:flex;align-items:center}
-.topics b{display:inline-block;text-align:center;font-weight:800;letter-spacing:.12em;padding-left:.12em}
+html,body{height:1080px}.canvas{height:1080px;background:var(--paper);color:#1C1A17}
+.logo{top:96px;width:200px}
+.stack{position:absolute;left:96px;top:236px;bottom:96px;display:flex;flex-direction:column;justify-content:space-between;z-index:3}
+.head .dash2{width:64px;height:4px;background:#D6001F;margin-bottom:22px}
+.eyebrow{font-weight:600;font-size:26px;letter-spacing:.16em;text-transform:uppercase;color:#6A6965;white-space:nowrap}
+.t{font-weight:700;line-height:.98;letter-spacing:-.035em;white-space:nowrap;font-size:88px}
+.wm{width:690px;height:92px;-webkit-mask:url(../assets/event/wordmark-skazochnaya-buhgalteriya.png) left center/contain no-repeat;mask:url(../assets/event/wordmark-skazochnaya-buhgalteriya.png) left center/contain no-repeat;background:#7160A3}
+.topics{list-style:none}
+.topics li{display:flex;align-items:center;font-weight:600;font-size:56px;line-height:1;letter-spacing:-.01em;height:56px;margin-bottom:10px}
+.topics li:last-child{margin-bottom:0}
+.topics b{display:inline-block;text-align:center;font-weight:800;letter-spacing:.12em;padding-left:.12em;width:130px;height:56px;line-height:56px;margin-right:26px;font-size:31px;color:#D6001F}
+.plates .topics b{background:#D6001F;color:#fff;border-radius:9px}
+.date{font-weight:700;font-size:48px;letter-spacing:-.02em;white-space:nowrap;margin-bottom:14px}
+.city{margin-left:24px;letter-spacing:.06em;text-transform:uppercase;color:#7160A3}
+.addr{font-weight:500;font-size:26px;color:#6A6965;white-space:nowrap}
 .girl{position:absolute;display:block}
-.date{position:absolute;left:96px;font-weight:700;letter-spacing:-.02em}
-.addr{position:absolute;left:96px;font-weight:500;font-size:26px}
-.orn{position:absolute;left:0;right:0;bottom:0;height:36px;background:url(../assets/event/ornament.png) center/auto 100% repeat-x;z-index:3}
-.canvas{background:var(--paper);color:#1C1A17}
-.dash2{top:234px;background:#D6001F}.eyebrow{top:262px;color:#7160A3}
-.wm{top:318px;width:690px;height:92px;background:#7160A3}
-.panel{position:absolute;left:0;right:0;top:458px;bottom:0;background:linear-gradient(160deg,#7160A3 0%,#7E7BC4 70%,#8899EB 100%);z-index:2}
-.girl{right:24px;top:240px;height:560px;z-index:1}
-.topics{top:490px;z-index:3}.topics li{font-weight:600;font-size:52px;height:52px;margin-bottom:10px;color:#F3EEDC}
-.topics b{width:122px;height:50px;line-height:50px;margin-right:28px;border-radius:9px;background:#D6001F;color:#fff;font-size:30px}
-.city{position:absolute;left:96px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#F3EEDC}.city{z-index:3;top:880px;font-size:54px}.date{top:816px;font-size:54px;color:#F3EEDC;z-index:3}.addr{top:962px;color:rgba(243,238,220,.9);z-index:3}
-.date .city{position:static;display:inline;margin-left:24px;top:auto;font-size:inherit}.date{top:832px}.date{font-size:48px}.addr{top:918px}</style></head><body><div class="canvas ">
+.panel{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(165deg,#7160A3 0%,#7E7BC4 65%,#8899EB 100%);z-index:2}.pstack{position:absolute;left:96px;display:flex;flex-direction:column;justify-content:space-between}.panel .topics li{color:#F3EEDC}.panel .topics b{background:#D6001F;color:#fff;border-radius:9px}.panel .date,.panel .city{color:#F3EEDC}.panel .addr{color:rgba(243,238,220,.9)}.girl{right:24px;top:240px;height:560px;z-index:1}
+</style></head><body><div class="canvas ">
 <img class="logo" src="../assets/event/logo-forum.png" alt="">
-<div class="dash2"></div><div class="eyebrow">III форум главных бухгалтеров</div>
-<div class="wm"></div>
-<ul class="topics"><li><b>PRO</b>Налоги</li><li><b>PRO</b>Дробление</li><li><b>PRO</b>ИФНС</li><li><b>PRO</b>ИИ</li><li><b>PRO</b>Закрытие года</li></ul>
-<div class="panel"></div><img class="girl" src="../assets/event/girl-abacus.png" alt="">
-<div class="date">5&nbsp;ноября 2026&nbsp;г.<span class="city">Барнаул</span></div>
-<div class="addr">ул.&nbsp;Пушкина, д.&nbsp;41 · Театр кукол «Сказка»</div>
+<div class="stack top" style="bottom:auto;top:236px"><div class="head"><div class="dash2"></div><div class="eyebrow">III форум главных бухгалтеров</div></div><div class="wm" style="margin-top:40px"></div></div><img class="girl" src="../assets/event/girl-abacus.png" alt=""><div class="panel" style="top:458px"><div class="pstack" style="top:34px;bottom:96px"><ul class="topics"><li><b>PRO</b>Налоги</li><li><b>PRO</b>Дробление</li><li><b>PRO</b>ИФНС</li><li><b>PRO</b>ИИ</li><li><b>PRO</b>Закрытие года</li></ul><div><div class="date">5&nbsp;ноября 2026&nbsp;г.<span class="city">Барнаул</span></div><div class="addr">ул.&nbsp;Пушкина, д.&nbsp;41 · Театр кукол «Сказка»</div></div></div></div>
 </div></body></html>
