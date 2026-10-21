@@ -17,7 +17,7 @@ def report(e=None):
     for x in e: L.append('| %s | %s | %s | %s | %s | %s | %s | %s | %s | %s |'%(x['id'],x['date'],x['topic'],x['template'],x['register'],x['photo'] or '—',x['accent'] or '—',x['watermark'] or '—',x['status'],x['note'] or ''))
     open(os.path.join(P,'LOG.md'),'w',encoding='utf8').write('\n'.join(L)+'\n')
 def suggest(n):
-    e=[x for x in load() if x['status']!='снят'][-n:]
+    e=[x for x in load() if x['status']!='снят' and not x['template'].startswith('E')][-n:]  # события (E*) — отдельная айдентика, в проверку серии не входят
     ph=collections.Counter(x['photo'] for x in e if x['photo']); rg=collections.Counter(x['register'] for x in e); tp=collections.Counter(x['template'] for x in e)
     print('Последние %d макетов.'%len(e))
     print('Фото (не повторять, если можно): ',', '.join('%s×%d'%kv for kv in ph.most_common()) or '—')
