@@ -256,7 +256,7 @@
   "accent": "черта",
   "watermark": "",
   "status": "предложен",
-  "note": "новое фото",
+  "note": "хороший; кроп доработан: люди видны по пояс (заголовок 80)",
   "file": "examples/ooo-ip-v1b.png"
  },
  {
@@ -268,8 +268,21 @@
   "photo": "team/concrete-0297",
   "accent": "«дробление»",
   "watermark": "icons/ruble-badge",
-  "status": "предложен",
-  "note": "светлый регистр",
+  "status": "отклонён",
+  "note": "«плохой» (заказчик): не повторять V11 + concrete-0297 + знак рубль",
   "file": "examples/ooo-ip-v11.png"
+ },
+ {
+  "id": "2026-10-21-06",
+  "date": "2026-10-21",
+  "topic": "Наличие ООО и ИП — дробление или нет?",
+  "template": "V1",
+  "register": "фото",
+  "photo": "team/square/concrete-0244-sq",
+  "accent": "черта",
+  "watermark": "",
+  "status": "предложен",
+  "note": "альтернативный кадр, люди целиком до стола",
+  "file": "examples/ooo-ip-v1c.png"
  }
 ]
