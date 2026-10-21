@@ -336,5 +336,57 @@
   "status": "предложен",
   "note": "вариант D: кремовый фон, красные и сиреневые иконки",
   "file": "examples/forum-d.png"
+ },
+ {
+  "id": "2026-10-21-10",
+  "date": "2026-10-21",
+  "topic": "Форум «Сказочная бухгалтерия», квадрат: без девочки",
+  "template": "E1",
+  "register": "кремовый, цвета форума",
+  "photo": "event/girl-abacus",
+  "accent": "PRO",
+  "watermark": "event/icons",
+  "status": "предложен",
+  "note": "forum-d-nogirl",
+  "file": "examples/forum-d-nogirl.png"
+ },
+ {
+  "id": "2026-10-21-11",
+  "date": "2026-10-21",
+  "topic": "Форум «Сказочная бухгалтерия», квадрат: девочка выглядывает из угла",
+  "template": "E1",
+  "register": "кремовый, цвета форума",
+  "photo": "event/girl-abacus",
+  "accent": "PRO",
+  "watermark": "event/icons",
+  "status": "предложен",
+  "note": "forum-d-peek",
+  "file": "examples/forum-d-peek.png"
+ },
+ {
+  "id": "2026-10-21-12",
+  "date": "2026-10-21",
+  "topic": "Форум «Сказочная бухгалтерия», квадрат: без девочки",
+  "template": "E1",
+  "register": "фиолетовый, цвета форума",
+  "photo": "event/girl-abacus",
+  "accent": "PRO",
+  "watermark": "event/icons",
+  "status": "предложен",
+  "note": "forum-c-nogirl",
+  "file": "examples/forum-c-nogirl.png"
+ },
+ {
+  "id": "2026-10-21-13",
+  "date": "2026-10-21",
+  "topic": "Форум «Сказочная бухгалтерия», квадрат: девочка выглядывает из угла",
+  "template": "E1",
+  "register": "фиолетовый, цвета форума",
+  "photo": "event/girl-abacus",
+  "accent": "PRO",
+  "watermark": "event/icons",
+  "status": "предложен",
+  "note": "forum-c-peek",
+  "file": "examples/forum-c-peek.png"
  }
 ]
