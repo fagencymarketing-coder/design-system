@@ -48,14 +48,19 @@ for fmt,pre in ((SQ,'forum'),(STO,'story')):
     std(f'{pre}-e',fmt,'plates','',('.girl{right:-6px;top:1440px;height:900px}' if sto else '.girl{right:-10px;top:790px;height:780px}'))
     std(f'{pre}-b',fmt,'',('.stack{}' ),('.girl{right:60px;top:770px;height:520px}' if sto else '.girl{right:30px;top:420px;height:660px}'))
 # I — светлый верх + панель
-def pan(name,fmt,ptop,wmtop,girlcss,pad,plates=True):
+def pan(name,fmt,ptop,wmtop,girlcss,pad,plates=True,pill=False):
     sto=fmt is STO
     top=f'<div class="stack top" style="bottom:auto;top:{fmt["ST"]}px">{HEAD}<div class="wm" style="margin-top:{wmtop}px"></div></div>'
     panel=f'<div class="panel" style="top:{ptop}px"><div class="pstack" style="top:{pad}px;bottom:{fmt["SB"]}px"><ul class="topics">{li}</ul>{BOT}</div></div>'
-    css=(f'.panel{{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(165deg,#7160A3 0%,#7E7BC4 65%,#8899EB 100%);z-index:2}}'
+    PILL='.panel .topics li{background:#F3EEDC;color:#1C1A17;border-radius:999px;padding:0 34px 0 30px;width:fit-content;margin-bottom:26px}.panel .topics li:last-child{margin-bottom:0}.panel .topics b{color:#D6001F;width:auto;padding-left:0;margin-right:22px}'
+    PLATE='.panel .topics li{color:#F3EEDC}.panel .topics b{background:#D6001F;color:#fff;border-radius:9px}'
+    PLAIN='.panel .topics li{color:#F3EEDC}.panel .topics b{color:#D6001F;background:none;width:112px;padding-left:0;text-align:left}'
+    css=('.panel{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(165deg,#7160A3 0%,#7E7BC4 65%,#8899EB 100%);z-index:2}'
       '.pstack{position:absolute;left:96px;display:flex;flex-direction:column;justify-content:space-between}'
-      '.panel .topics li{color:#F3EEDC}'+('.panel .topics b{background:#D6001F;color:#fff;border-radius:9px}' if plates else '.panel .topics b{color:#D6001F;background:none;width:112px;padding-left:0;text-align:left}')+
+      +(PILL if pill else PLATE if plates else PLAIN)+
       '.panel .date,.panel .city{color:#F3EEDC}.panel .addr{color:rgba(243,238,220,.9)}'+girlcss)
     build(name,fmt,'',css,top+GIRL+panel)
 pan('forum-i',SQ,458,40,'.girl{right:24px;top:240px;height:560px;z-index:1}',34)
 pan('story-i',dict(STO,SB=340),760,60,'.girl{right:24px;top:500px;height:640px;z-index:1}',64,False)
+
+pan('story-i-pill',dict(STO,SB=340),760,60,'.girl{right:24px;top:500px;height:640px;z-index:1}',64,False,True)
