@@ -3,7 +3,7 @@ T=['Налоги','Дробление','ИФНС','ИИ','Закрытие го�
 li=''.join(f'<li><b>PRO</b>{t}</li>' for t in T)
 GIRL='<img class="girl" src="../assets/event/girl-abacus.png" alt="">'
 ADDR='ул.&nbsp;Пушкина, д.&nbsp;41 · Театр кукол «Сказка»'
-CONTACTS='www.skazbuh.ru <i>·</i> +7&nbsp;913&nbsp;026-17-37 <i>·</i> @TatiViktorY'
+CONTACTS='<span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>www.skazbuh.ru</span><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>+7&nbsp;913&nbsp;026-17-37</span><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>@TatiViktorY</span>'
 DATE='5&nbsp;ноября 2026&nbsp;г.<span class="city">Барнаул</span>'
 PAGE='''<!doctype html><html lang="ru"><head><meta charset="utf-8"><title>@TITLE@</title>
 <link rel="stylesheet" href="../templates/base.css"><style>
@@ -22,7 +22,7 @@ html,body{height:@H@px}.canvas{height:@H@px;background:var(--paper);color:#1C1A1
 .date{font-weight:700;font-size:@DS@px;letter-spacing:-.02em;white-space:nowrap;margin-bottom:@DM@px}
 .city{margin-left:@CG@px;letter-spacing:.06em;text-transform:uppercase;color:#7160A3}
 .addr{font-weight:500;font-size:@AS@px;color:#6A6965;white-space:nowrap}
-.contacts{font-weight:600;font-size:@CS@px;margin-top:@CM@px;white-space:nowrap;color:#1C1A17}.contacts i{font-style:normal;color:#D6001F;margin:0 .35em}
+.contacts{font-weight:600;font-size:@CS@px;margin-top:@CM@px;white-space:nowrap;color:#1C1A17;display:flex;align-items:center;gap:.7em}.ci{display:inline-flex;align-items:center;gap:.4em}.ci svg{width:1.05em;height:1.05em;color:#D6001F;flex:none}
 .girl{position:absolute;display:block}
 @CSS@
 </style></head><body><div class="canvas @CLS@">
@@ -47,8 +47,8 @@ def std(name,fmt,cls,css,girlcss):
 for fmt,pre in ((SQ,'forum'),(STO,'story')):
     sto=pre=='story'
     std(f'{pre}-f',fmt,'plates','',('.girl{right:36px;top:1530px;height:620px}' if sto else '.girl{right:36px;top:880px;height:620px}'))
-    std(f'{pre}-e',fmt,'plates','',('.girl{right:-6px;top:1490px;height:900px}' if sto else '.girl{right:-10px;top:790px;height:780px}'))
-    std(f'{pre}-b',fmt,'',('.stack{}' ),('.girl{right:60px;top:740px;height:500px}' if sto else '.girl{right:30px;top:420px;height:660px}'))
+    std(f'{pre}-e',fmt,'plates','',('.girl{right:-6px;top:1490px;height:900px}' if sto else '.girl{right:-44px;top:790px;height:780px}'))
+    std(f'{pre}-b',fmt,'',('.stack{}' ),('.girl{right:60px;top:740px;height:500px}' if sto else '.girl{right:-6px;top:420px;height:660px}'))
 # I — светлый верх + панель
 def pan(name,fmt,ptop,wmtop,girlcss,pad,plates=True,pill=False):
     sto=fmt is STO
@@ -60,7 +60,7 @@ def pan(name,fmt,ptop,wmtop,girlcss,pad,plates=True,pill=False):
     css=('.panel{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(165deg,#7160A3 0%,#7E7BC4 65%,#8899EB 100%);z-index:2}'
       '.pstack{position:absolute;left:96px;display:flex;flex-direction:column;justify-content:space-between}'
       +(PILL if pill else PLATE if plates else PLAIN)+
-      '.panel .date,.panel .city,.panel .contacts{color:#F3EEDC}.panel .contacts i{color:#fff;opacity:.7}.panel .addr{color:rgba(243,238,220,.9)}'+girlcss)
+      '.panel .date,.panel .city,.panel .contacts{color:#F3EEDC}.panel .ci svg{color:#F3EEDC}.panel .addr{color:rgba(243,238,220,.9)}'+girlcss)
     build(name,fmt,'',css,top+GIRL+panel)
 pan('forum-i',SQ,458,40,'.girl{right:24px;top:240px;height:560px;z-index:1}',34)
 pan('story-i',dict(STO,SB=340),760,60,'.girl{right:24px;top:500px;height:640px;z-index:1}',64,False)
