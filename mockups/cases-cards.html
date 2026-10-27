@@ -1,0 +1,198 @@
+<title>Кейсы 1+1 — карточки</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+/* Раскладка: шапка секции → ряд из трёх карточек (grid, 3 → 1 колонка) → спецификация.
+   Светлый регистр бренда: фон cloud, белые карточки, дуэт crimson + olive. */
+:root{
+  --crimson:#D73A61;
+  --olive:#ABAD58;
+  --ink:#1B1B1B;
+  --cloud:#F9F9F9;
+  --white:#FFFFFF;
+  --cream:#F2F3ED;
+  --ink-60:rgba(27,27,27,.60);
+  --ink-45:rgba(27,27,27,.45);
+  --line:rgba(27,27,27,.10);
+  --shadow-md:0 6px 24px rgba(27,27,27,.07);
+  --shadow-lg:0 14px 38px rgba(27,27,27,.12);
+  --font:"Manrope","Gilroy",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{
+  background:var(--cloud);
+  color:var(--ink);
+  font-family:var(--font);
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{
+  max-width:1200px;margin:0 auto;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+  padding-block:56px 72px;
+}
+
+/* --- шапка секции --- */
+.head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:36px}
+.head h1{
+  margin:0;font-size:clamp(40px,6vw,64px);font-weight:800;
+  letter-spacing:-.03em;line-height:.95;text-wrap:balance;
+}
+.head p{margin:10px 0 0;color:var(--ink-60);font-size:17px}
+.all{
+  display:inline-flex;align-items:center;gap:10px;text-decoration:none;
+  color:var(--olive);font-weight:700;font-size:16px;padding-bottom:4px;
+  border-bottom:2px solid transparent;transition:border-color .2s,gap .2s;
+}
+.all:hover{border-color:var(--olive);gap:14px}
+
+/* --- карточки --- */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch}
+.card{
+  display:flex;flex-direction:column;min-width:0;
+  background:var(--white);border-radius:18px;padding:30px 28px 24px;
+  box-shadow:var(--shadow-md);text-decoration:none;color:inherit;
+  transition:transform .22s ease,box-shadow .22s ease;
+}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.card:focus-visible{outline:3px solid var(--crimson);outline-offset:3px}
+
+/* эйброу-метка: цветная черта + номер кейса */
+.eyebrow{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--ink-60);font-weight:600}
+.eyebrow::before{content:"";width:28px;height:3px;border-radius:2px;background:var(--dash,var(--crimson))}
+.c1{--dash:var(--crimson)} .c2{--dash:var(--olive)} .c3{--dash:var(--crimson)}
+
+/* панель клиента */
+.client{
+  margin-top:18px;background:var(--cream);border-radius:12px;padding:16px 18px;
+  display:grid;gap:10px;
+}
+.row{display:grid;grid-template-columns:84px 1fr;gap:12px;align-items:baseline;min-width:0}
+.row dt{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-45);font-weight:700}
+.row dd{margin:0;font-size:15px;line-height:1.35;font-weight:600;min-width:0}
+.row dd.muted{font-weight:500;color:var(--ink-60)}
+.slot{color:var(--ink-45);font-weight:500;font-style:normal;border-bottom:1px dashed var(--ink-45)}
+
+/* заголовок кейса */
+.card h2{
+  margin:22px 0 0;font-size:21px;line-height:1.22;font-weight:700;
+  letter-spacing:-.015em;text-wrap:balance;
+}
+
+/* результат */
+.result{margin-top:auto;padding-top:22px}
+.result .bar{height:1px;background:var(--line);margin-bottom:18px}
+.figure{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.figure b{
+  font-size:38px;font-weight:800;letter-spacing:-.03em;line-height:1;
+  font-variant-numeric:tabular-nums;color:var(--fig,var(--crimson));
+}
+.figure .phrase{font-size:22px;font-weight:800;letter-spacing:-.02em;color:var(--fig,var(--crimson));line-height:1.15}
+.figure span{font-size:15px;color:var(--ink-60);font-weight:600}
+.under{margin:8px 0 0;font-size:14px;color:var(--ink-60)}
+.go{
+  margin-top:20px;display:inline-flex;align-items:center;gap:9px;
+  font-weight:700;font-size:15px;color:var(--ink);transition:gap .2s;
+}
+.card:hover .go{gap:13px}
+.go svg{width:16px;height:16px;color:var(--dash)}
+
+/* --- спецификация --- */
+.spec{margin-top:56px;border-top:1px solid var(--line);padding-top:28px;display:grid;gap:20px;grid-template-columns:repeat(3,1fr)}
+.spec h3{margin:0 0 8px;font-size:15px;font-weight:800;letter-spacing:-.01em}
+.spec p{margin:0;font-size:14px;line-height:1.5;color:var(--ink-60)}
+.spec code{background:var(--cream);padding:1px 6px;border-radius:5px;font-size:13px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+
+@media (max-width:900px){
+  .cards{grid-template-columns:1fr}
+  .spec{grid-template-columns:1fr}
+  .card h2{font-size:20px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap">
+
+<div class="wrap">
+  <div class="head">
+    <div>
+      <h1>Кейсы</h1>
+      <p>Найдите бизнес, похожий на ваш</p>
+    </div>
+    <a class="all" href="#">Смотреть все кейсы →</a>
+  </div>
+
+  <div class="cards">
+
+    <a class="card c1" href="#">
+      <div class="eyebrow">Кейс № 1</div>
+      <dl class="client">
+        <div class="row"><dt>Сфера</dt><dd>Производство и продажа одежды</dd></div>
+        <div class="row"><dt>Форма</dt><dd>ИП</dd></div>
+        <div class="row"><dt>Каналы</dt><dd class="muted">Wildberries, интернет-магазин, розничные точки</dd></div>
+      </dl>
+      <h2>Как мы помогли бренду одежды вырасти от старта на WB до мультиканальных продаж</h2>
+      <div class="result" style="--fig:var(--crimson)">
+        <div class="bar"></div>
+        <div class="figure"><span class="phrase">Мультиканальные продажи</span></div>
+        <p class="under">1С:Бухгалтерия + 1С:Управление торговлей, учёт производства и себестоимости</p>
+        <span class="go">Смотреть кейс
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+        </span>
+      </div>
+    </a>
+
+    <a class="card c2" href="#">
+      <div class="eyebrow">Кейс № 2</div>
+      <dl class="client">
+        <div class="row"><dt>Сфера</dt><dd>Розничная торговля</dd></div>
+        <div class="row"><dt>Форма</dt><dd>3 ООО на ОСНО + 2 ИП на УСН 15%</dd></div>
+        <div class="row"><dt>Масштаб</dt><dd class="muted">150 торговых точек — Алтайский край и Сибирь</dd></div>
+      </dl>
+      <h2>Как мы навели порядок в учете для торговой сети на 150 точек и 1,1 млрд выручки</h2>
+      <div class="result" style="--fig:var(--olive)">
+        <div class="bar"></div>
+        <div class="figure"><b>1,1 млрд&nbsp;₽</b><span>выручка за 2024 год</span></div>
+        <p class="under">Результат через 4 месяца работы: переход группы на НДС с начала года</p>
+        <span class="go">Смотреть кейс
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+        </span>
+      </div>
+    </a>
+
+    <a class="card c3" href="#">
+      <div class="eyebrow">Кейс № 3</div>
+      <dl class="client">
+        <div class="row"><dt>Сфера</dt><dd>Производство</dd></div>
+        <div class="row"><dt>Форма</dt><dd><i class="slot">[ООО или ИП]</i></dd></div>
+        <div class="row"><dt>Учёт</dt><dd class="muted">1С:УНФ, выгрузка в 1С:Бухгалтерию</dd></div>
+      </dl>
+      <h2>Как мы спасли бизнес от финансовой неразберихи и вернули 200 000 рублей</h2>
+      <div class="result" style="--fig:var(--crimson)">
+        <div class="bar"></div>
+        <div class="figure"><b>200 000&nbsp;₽</b><span>вернули клиенту</span></div>
+        <p class="under">Уточнённые декларации, пересчёт зарплат и НДФЛ, управленческий учёт</p>
+        <span class="go">Смотреть кейс
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+        </span>
+      </div>
+    </a>
+
+  </div>
+
+  <div class="spec">
+    <div>
+      <h3>Блок клиента</h3>
+      <p>Кремовая панель <code>#F2F3ED</code> на белой карточке, три строки «метка — значение». Метки фиксированные: <code>Сфера</code>, <code>Форма</code>, третья строка — масштаб бизнеса или учётная система. Больше трёх строк карточку перегружают.</p>
+    </div>
+    <div>
+      <h3>Результат</h3>
+      <p>Цифра из кейса очень крупно: малиновая или оливковая, по очереди между карточками. Если в кейсе числа нет — вместо цифры короткая фраза тем же цветом и кеглем поменьше (карточка № 1).</p>
+    </div>
+    <div>
+      <h3>Чего нет в текстах кейсов</h3>
+      <p>Оборот, число сотрудников и стоимость обслуживания на страницах не указаны — пунктирный слот показывает, как выглядит незаполненное поле. Дайте значения, и они встанут в те же строки.</p>
+    </div>
+  </div>
+</div>
