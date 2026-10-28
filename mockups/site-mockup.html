@@ -1,0 +1,165 @@
+<title>Кейсы 1+1 на сайте</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+/* Раскладка: шапка секции → три карточки в ряд (на телефоне в одну колонку) + круглая кнопка-стрелка карусели.
+   Светлый регистр бренда: фон cloud, белые карточки, дуэт crimson + olive. */
+:root{
+  --crimson:#D73A61;
+  --olive:#6F8434;
+  --olive-soft:#ABAD58;
+  --ink:#1B1B1B;
+  --cloud:#F6F6F2;
+  --white:#FFFFFF;
+  --ink-60:rgba(27,27,27,.58);
+  --ink-45:rgba(27,27,27,.42);
+  --line:rgba(27,27,27,.09);
+  --shadow-md:0 8px 28px rgba(27,27,27,.07);
+  --shadow-lg:0 16px 40px rgba(27,27,27,.13);
+  --font:"Manrope","Gilroy",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{background:var(--cloud);color:var(--ink);font-family:var(--font);-webkit-font-smoothing:antialiased}
+.wrap{
+  max-width:1200px;margin:0 auto;position:relative;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+  padding-block:64px 80px;
+}
+
+.head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:40px}
+.head h1{margin:0;font-size:clamp(44px,6vw,68px);font-weight:800;letter-spacing:-.03em;line-height:.95}
+.head p{margin:12px 0 0;color:var(--ink-60);font-size:18px}
+.all{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--olive);font-weight:800;font-size:17px;transition:gap .2s}
+.all:hover{gap:14px}
+.all svg,.go svg{width:18px;height:18px}
+
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch}
+.card{
+  --acc:var(--crimson);
+  display:flex;flex-direction:column;min-width:0;
+  background:var(--white);border-radius:28px;padding:40px 36px 32px;
+  box-shadow:var(--shadow-md);text-decoration:none;color:inherit;
+  transition:transform .22s ease,box-shadow .22s ease;
+}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.card:focus-visible{outline:3px solid var(--crimson);outline-offset:3px}
+.c2{--acc:var(--olive)}
+.c3{--acc:var(--ink)}
+
+.ico{width:44px;height:44px;color:var(--acc);margin-bottom:34px;display:block}
+.ico.m{color:var(--crimson)}
+.tag{margin:0;font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--acc)}
+.c3 .tag{color:var(--ink)}
+.card h2{margin:10px 0 0;min-height:2.36em;font-size:24px;line-height:1.18;font-weight:800;letter-spacing:-.02em}
+.meta{margin:12px 0 0;font-size:15px;color:var(--ink-45)}
+.meta i{font-style:normal;padding:0 7px}
+
+.price{margin-top:26px;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.price .ap{color:var(--ink-45);font-size:20px}
+.price b{font-size:46px;font-weight:800;letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums;color:var(--acc)}
+.price span{color:var(--ink-45);font-size:17px}
+
+.desc{margin:26px 0 0;padding-top:26px;border-top:1px solid var(--line);font-size:18px;line-height:1.5;color:var(--ink);font-weight:500;flex:1}
+.go{margin-top:32px;display:inline-flex;align-items:center;gap:10px;font-weight:800;font-size:17px;transition:gap .2s}
+.go svg{color:var(--crimson)}
+.c2 .go svg{color:var(--olive)}
+.card:hover .go{gap:14px}
+
+.next{
+  position:absolute;right:max(16px,env(safe-area-inset-right,0px));
+  margin-right:-26px;bottom:calc(80px + 160px);
+  width:56px;height:56px;border-radius:50%;border:0;background:var(--ink);color:#fff;
+  display:grid;place-items:center;box-shadow:var(--shadow-lg);cursor:pointer;
+}
+.next svg{width:22px;height:22px}
+.next:focus-visible{outline:3px solid var(--crimson);outline-offset:3px}
+
+@media (max-width:980px){.card h2{min-height:0}
+  .cards{grid-template-columns:1fr}
+  .next{display:none}
+  .card{padding:32px 26px 26px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+body{background:#F9F9F9}
+.site{max-width:1280px;margin:0 auto;padding:12px max(16px,env(safe-area-inset-left,0px)) 0}
+.nav{display:flex;align-items:center;gap:26px;flex-wrap:wrap;background:#F2F3ED;border-radius:26px;padding:10px 18px;font-size:15px;font-weight:600}
+.nav a{color:var(--ink);text-decoration:none}
+.nav .btn{background:#ABAD58;color:#fff;border-radius:10px;padding:11px 18px}
+.nav .pr{color:var(--crimson)}
+.nav .cta{margin-left:auto;background:var(--ink);color:#fff;border-radius:10px;padding:12px 24px;font-weight:700}
+.nav .ph{font-size:14px;line-height:1.25;font-weight:600}
+.above{height:70px;display:flex;align-items:flex-end;padding:0 4px 20px}
+.above span{height:14px;width:min(520px,60%);border-radius:7px;background:rgba(27,27,27,.06);box-shadow:0 -26px 0 rgba(27,27,27,.05)}
+.wrap{padding-block:30px 80px}
+.call{position:fixed;right:28px;bottom:28px;width:64px;height:64px;border-radius:50%;background:var(--crimson);display:grid;place-items:center;box-shadow:0 8px 24px rgba(215,58,97,.4)}
+.call svg{width:28px;height:28px}
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&display=swap">
+<div class="site"><nav class="nav"><svg width="66" height="33" viewBox="0 0 60 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 9.034C0 10.1795 0.0993716 10.784 0.705845 11.748C0.812107 11.9169 0.991166 12.1526 1.12248 12.2904C1.5979 12.7896 2.10314 13.1102 2.74773 13.3384C3.85274 13.7293 5.00107 13.2887 5.71345 12.7929L5.7288 18.3987C6.27093 18.1151 7.23845 17.2284 7.59948 16.6972V9.08629L5.15357 11.0659C4.26735 11.7831 2.8899 11.6638 2.19342 10.6826C1.49738 9.70211 1.8766 8.31611 2.72011 7.63334L9.05666 2.50484C9.21886 2.37356 9.39464 2.27328 9.57743 2.20271C10.0235 2.01882 10.5266 2.02115 10.9846 2.19888C11.3149 2.32728 11.6804 2.65261 11.9 2.93743C12.2617 3.40595 12.4041 4.1861 12.4041 4.92678V10.8007C12.8431 10.3185 13.5597 9.79893 14.2465 9.52027V3.90993C14.2465 2.06397 12.7397 0.611486 11.7338 0.284012C10.6921 -0.0551781 9.19636 0.114282 8.29827 0.666135C7.94843 0.881025 7.26607 1.47702 6.94977 1.73782C6.0878 2.44822 4.20309 4.03676 3.43469 4.58703L1.38741 6.22788L0.832139 6.79481C0.387172 7.3945 0 8.26306 0 9.034Z" fill="#D73A61"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.59944 24.1131C7.59835 23.6273 7.59855 23.0921 7.59944 22.5445V18.3234C6.97564 19.0147 6.36221 19.4312 5.70703 19.6436L5.73158 25.7357C5.77525 26.8102 6.02907 27.8106 6.52328 28.4312C7.03162 28.9433 7.54203 29.3451 8.24035 29.5893C10.2586 30.0118 11.8138 29.8619 13.1046 28.7092C13.9161 27.9846 14.2226 26.9771 14.2165 25.7327L14.206 10.8887C13.5748 11.2223 12.9889 11.6746 12.4154 12.2672L12.404 25.8756C12.4033 26.6873 11.9401 27.3905 11.2783 27.704C10.7764 27.9418 9.37135 27.9589 8.85023 27.7577C8.12253 27.477 7.59944 26.7377 7.59944 25.8756V24.1131Z" fill="#D73A61"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16.3174 14.8642C16.3174 16.2002 16.6037 17.1464 17.4319 18.1719C18.4475 19.0203 18.8969 19.1349 20.2837 19.1342L20.4863 19.1349L31.7707 19.1346C32.0079 19.1346 32.2498 19.2945 32.2505 19.4893L32.2598 22.0378L32.2438 25.7143C32.2288 27.1045 31.7162 28.0247 30.1865 28.0548C28.3106 28.0917 27.7518 27.1868 27.7485 25.6829L27.7359 20.2417L26.1041 20.228C26.0763 22.3672 26.0229 24.6317 26.1077 26.7351C26.1854 28.6578 27.6552 29.6341 29.2614 29.9555C29.4967 30.0026 29.8501 30.0003 30.0997 30.0003C30.8131 30.0003 31.5611 29.8755 32.204 29.549C32.7125 29.2906 33.1426 28.8377 33.4507 28.3755C33.741 27.9399 33.9219 27.4627 33.9233 26.8502L33.9382 20.2857C33.906 19.251 33.912 18.777 33.5569 18.219C33.3241 17.8456 32.7028 17.5196 32.2788 17.4489C32.085 17.4164 31.68 17.3872 31.1855 17.362H19.8999C18.9049 17.362 18.0903 16.5028 18.0903 15.4532V14.5543C18.0903 13.5047 18.9048 12.6455 19.8999 12.6455H26.0306C25.8757 12.6438 25.7437 12.488 25.6107 12.3614C25.2386 11.8948 25.1244 11.5149 25.0599 10.8481L19.5956 10.8076C17.6609 10.8076 16.3174 13.047 16.3174 14.8642Z" fill="#D73A61"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M43.9336 8.92459C43.9336 10.0701 44.0329 10.6745 44.6394 11.6386C44.7456 11.8075 44.9248 12.0432 45.0561 12.181C45.5314 12.6802 46.0367 13.0009 46.6813 13.229C47.7863 13.6199 48.9347 13.1793 49.647 12.6836L49.6624 18.2893C50.2045 18.0057 51.172 17.119 51.5331 16.5878V8.97696L49.0871 10.9565C48.2009 11.6737 46.8235 11.5544 46.127 10.5732C45.4309 9.59271 45.8102 8.20671 46.6537 7.52393L52.9903 2.39546C53.1525 2.26419 53.3282 2.16391 53.511 2.09334C53.9571 1.90944 54.4602 1.91177 54.9182 2.08951C55.2484 2.21791 55.6139 2.54324 55.8336 2.82806C56.1952 3.29657 56.3376 4.07672 56.3376 4.8174V10.6913C56.7766 10.2091 57.4933 9.68959 58.18 9.41086V3.80056C58.18 1.9546 56.6733 0.502111 55.6673 0.174637C54.6257 -0.164553 53.13 0.0049067 52.2318 0.55676C51.882 0.771648 51.1996 1.36764 50.8834 1.62844C50.0213 2.33884 48.1367 3.92739 47.3683 4.47766L45.321 6.1185L44.7657 6.68543C44.3207 7.28516 43.9336 8.15366 43.9336 8.92459Z" fill="#ABAD58"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M51.5331 24.0038C51.532 23.5179 51.5322 22.9828 51.5331 22.4352V18.214C50.9093 18.9053 50.2959 19.3219 49.6406 19.5342L49.6652 25.6264C49.7089 26.7008 49.9627 27.7013 50.4569 28.3219C50.9653 28.834 51.4757 29.2357 52.1739 29.4799C54.1922 29.9025 55.7474 29.7525 57.0383 28.5998C57.8498 27.8752 58.1562 26.8677 58.1501 25.6233L58.1396 10.7793C57.5084 11.1129 56.9226 11.5652 56.349 12.1579L56.3376 25.7663C56.337 26.5779 55.8737 27.2812 55.2119 27.5947C54.71 27.8325 53.305 27.8495 52.7839 27.6484C52.0561 27.3677 51.5331 26.6283 51.5331 25.7663V24.0038Z" fill="#ABAD58"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M43.7008 15.1393C43.7008 13.8033 43.4144 12.857 42.5863 11.8316C41.5706 10.9833 41.1212 10.8685 39.7344 10.8693L39.5318 10.8685L28.2474 10.8687C28.0102 10.8687 27.7683 10.7088 27.7676 10.514L27.7583 7.96555L27.7971 4.25896C27.8121 2.86885 28.3191 1.91058 29.8489 1.8805C31.7248 1.84355 32.2663 2.81652 32.2696 4.32041L32.2822 9.76159L33.9141 9.77536C33.9418 7.63609 33.9952 5.37161 33.9105 3.26821C33.8327 1.34552 32.4423 0.314977 30.7727 0.082873C30.5373 0.0357494 30.1469 0 29.8973 0C28.6279 0 27.271 0.572435 26.5675 1.62782C26.2201 2.14885 26.1225 2.73524 26.0605 3.52694L26.08 9.71761C26.1122 10.7523 26.1061 11.2263 26.4612 11.7843C26.6117 12.0256 27.0083 12.2746 27.2478 12.407C27.407 12.4765 27.5725 12.5266 27.7393 12.5545C27.9331 12.5868 28.3382 12.6161 28.8326 12.6413H40.1182C41.1133 12.6413 41.9278 13.5005 41.9278 14.5501V15.449C41.9278 16.4984 41.113 17.3578 40.1182 17.3578H33.8553C34.0414 17.3603 34.2744 17.5469 34.4033 17.7089C34.7678 18.1662 34.8368 18.5881 34.9486 19.1552L40.4225 19.1957C42.3572 19.1957 43.7008 16.9564 43.7008 15.1393Z" fill="#ABAD58"/>
+</svg>
+
+<a class="btn" href="#">☰ Услуги</a><a href="#">О компании</a><a href="#">Цены</a><a href="#">Оплата</a><a href="#">Контакты</a><a class="pr" href="#">Премиум-сервис</a>
+<span class="ph">8 800 600-56-86<br>8 3852 50-15-20</span><a class="cta" href="#">Оставить заявку</a></nav><div class="above"></div></div><div class="wrap">
+  <div class="head">
+    <div>
+      <h1>Кейсы</h1>
+      <p>Найдите бизнес, похожий на ваш</p>
+    </div>
+    <a class="all" href="#">Смотреть все кейсы
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+
+  <div class="cards">
+
+    <a class="card c1" href="#">
+      <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 15h28l-1.6 24a3 3 0 0 1-3 2.8H14.6a3 3 0 0 1-3-2.8L10 15z"/><path d="M17 20v-4a7 7 0 0 1 14 0v4"/><path d="M18 26c1.5 4 10.5 4 12 0"/></svg>
+      <p class="tag">E-commerce</p>
+      <h2>Одежда · маркетплейсы</h2>
+      <p class="meta">ООО<i>·</i>28 сотрудников</p>
+      <div class="price"><em class="ap" style="font-style:normal">≈</em><b>45 000&nbsp;₽</b><span>/ мес</span></div>
+      <p class="desc">Помогли бренду одежды вырасти от старта на Wildberries до мультиканальных продаж</p>
+      <span class="go">Смотреть кейс
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </span>
+    </a>
+
+    <a class="card c2" href="#">
+      <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21 10 9h28l3 12"/><path d="M7 21a5.7 5.7 0 0 0 11.3 0 5.7 5.7 0 0 0 11.4 0A5.7 5.7 0 0 0 41 21"/><path d="M10 28v12h28V28"/><path d="M20 40V32h8v8"/></svg>
+      <p class="tag">Розничная торговля</p>
+      <h2>Сеть магазинов · 150 точек</h2>
+      <p class="meta">ООО<i>·</i>210 сотрудников</p>
+      <div class="price"><em class="ap" style="font-style:normal">≈</em><b>90 000&nbsp;₽</b><span>/ мес</span></div>
+      <p class="desc">Навели порядок в учёте торговой сети и подготовили компанию к росту выручки</p>
+      <span class="go">Смотреть кейс
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </span>
+    </a>
+
+    <a class="card c3" href="#">
+      <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6 9 12v11c0 9.5 6.2 16.2 15 19 8.8-2.8 15-9.5 15-19V12L24 6z"/><path d="m17 24 5 5 9-10"/></svg>
+      <p class="tag">Услуги · IT</p>
+      <h2>IT-компания · SaaS</h2>
+      <p class="meta">ООО<i>·</i>28 сотрудников</p>
+      <div class="price"><em class="ap" style="font-style:normal">≈</em><b>45 000&nbsp;₽</b><span>/ мес</span></div>
+      <p class="desc">Спасли бизнес от финансовой неразберихи и вернули переплаты по налогам</p>
+      <span class="go">Смотреть кейс
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </span>
+    </a>
+
+  </div>
+
+  <button class="next" type="button" aria-label="Дальше">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+  </button>
+</div>
+<div class="call"><svg viewBox="0 0 24 24" fill="#fff"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11 11 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.6 3.6a1 1 0 0 1-.25 1z"/></svg></div>

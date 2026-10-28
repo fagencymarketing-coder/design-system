@@ -51,7 +51,7 @@ body{background:var(--cloud);color:var(--ink);font-family:var(--font);-webkit-fo
 .ico.m{color:var(--crimson)}
 .tag{margin:0;font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--acc)}
 .c3 .tag{color:var(--ink)}
-.card h2{margin:10px 0 0;font-size:24px;line-height:1.18;font-weight:800;letter-spacing:-.02em}
+.card h2{margin:10px 0 0;min-height:2.36em;font-size:24px;line-height:1.18;font-weight:800;letter-spacing:-.02em}
 .meta{margin:12px 0 0;font-size:15px;color:var(--ink-45)}
 .meta i{font-style:normal;padding:0 7px}
 
@@ -75,7 +75,7 @@ body{background:var(--cloud);color:var(--ink);font-family:var(--font);-webkit-fo
 .next svg{width:22px;height:22px}
 .next:focus-visible{outline:3px solid var(--crimson);outline-offset:3px}
 
-@media (max-width:980px){
+@media (max-width:980px){.card h2{min-height:0}
   .cards{grid-template-columns:1fr}
   .next{display:none}
   .card{padding:32px 26px 26px}
