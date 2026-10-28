@@ -24,21 +24,21 @@ body{background:var(--cloud);color:var(--ink);font-family:var(--font);-webkit-fo
   max-width:1560px;margin:0 auto;position:relative;
   padding-left:max(16px,env(safe-area-inset-left,0px));
   padding-right:max(16px,env(safe-area-inset-right,0px));
-  padding-block:56px 72px;
+  padding-block:88px 112px;
 }
 
-.head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:36px}
+.head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:56px}
 .head h1{margin:0;font-size:clamp(44px,5vw,64px);font-weight:800;letter-spacing:-.03em;line-height:.95}
-.head p{margin:12px 0 0;color:var(--ink-60);font-size:18px}
+.head p{margin:16px 0 0;color:var(--ink-60);font-size:18px}
 .all{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--olive);font-weight:800;font-size:17px;transition:gap .2s}
 .all:hover{gap:14px}
 .all svg{width:18px;height:18px}
 
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;align-items:stretch}
 .card{
   --acc:var(--crimson);
   display:flex;flex-direction:column;min-width:0;
-  background:var(--white);border-radius:24px;padding:28px 30px;
+  background:var(--white);border-radius:26px;padding:40px 38px 34px;
   box-shadow:var(--shadow-md);text-decoration:none;color:inherit;
   transition:transform .22s ease,box-shadow .22s ease;
 }
@@ -48,31 +48,28 @@ body{background:var(--cloud);color:var(--ink);font-family:var(--font);-webkit-fo
 .c3{--acc:var(--ink)}
 
 /* шапка карточки: иконка слева, подписи справа */
-.top{display:flex;gap:16px;align-items:flex-start;min-width:0}
-.ico{flex:none;width:38px;height:38px;color:var(--acc)}
+.top{min-width:0}
+.ico{display:block;width:42px;height:42px;color:var(--acc);margin-bottom:26px}
 .tag{margin:0;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--acc)}
-.card h2{margin:5px 0 0;font-size:22px;line-height:1.15;font-weight:800;letter-spacing:-.02em}
-.meta{margin:7px 0 0;font-size:14px;color:var(--ink-45)}
+.card h2{margin:9px 0 0;font-size:22px;line-height:1.15;font-weight:800;letter-spacing:-.02em}
+.meta{margin:13px 0 0;font-size:14px;color:var(--ink-45)}
 .meta i{font-style:normal;padding:0 6px}
 
 /* низ карточки: два столбца — цена и описание */
-.bot{
-  margin-top:22px;padding-top:20px;border-top:1px solid var(--line);
-  display:grid;grid-template-columns:minmax(150px,auto) 1fr;gap:12px 26px;align-items:start;
-}
-.price{display:flex;align-items:baseline;gap:7px;flex-wrap:wrap}
+.bot{margin-top:26px;display:grid;gap:26px;align-items:start}
+.price{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
 .price em{font-style:normal;color:var(--ink-45);font-size:17px}
-.price b{font-size:34px;font-weight:800;letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums;color:var(--acc)}
+.price b{font-size:38px;font-weight:800;letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums;color:var(--acc)}
 .price span{color:var(--ink-45);font-size:14px}
-.desc{margin:0;font-size:16px;line-height:1.45;font-weight:500}
-.go{grid-column:1;display:inline-flex;align-items:center;gap:9px;font-weight:800;font-size:15px;transition:gap .2s;align-self:end}
+.desc{margin:0;padding-top:28px;border-top:1px solid var(--line);font-size:17px;line-height:1.6;font-weight:500}
+.go{display:inline-flex;align-items:center;gap:9px;font-weight:800;font-size:16px;transition:gap .2s;justify-self:start}
 .go svg{width:16px;height:16px;color:var(--crimson)}
 .c2 .go svg{color:var(--olive)}
 .card:hover .go{gap:13px}
 
 .next{
   position:absolute;right:max(16px,env(safe-area-inset-right,0px));
-  margin-right:-24px;bottom:calc(72px + 90px);
+  margin-right:-24px;bottom:calc(112px + 110px);
   width:52px;height:52px;border-radius:50%;border:0;background:var(--ink);color:#fff;
   display:grid;place-items:center;box-shadow:var(--shadow-lg);cursor:pointer;
 }
@@ -82,12 +79,9 @@ body{background:var(--cloud);color:var(--ink);font-family:var(--font);-webkit-fo
 @media (max-width:1240px){
   .cards{grid-template-columns:1fr}
   .next{display:none}
-  .bot{grid-template-columns:minmax(150px,auto) 1fr}
 }
 @media (max-width:620px){
-  .card{padding:24px 22px}
-  .bot{grid-template-columns:1fr}
-  .go{grid-column:auto}
+  .card{padding:30px 24px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
