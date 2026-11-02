@@ -3,21 +3,18 @@
 html,body{width:1080px;height:1920px}
 .bgc.a{left:-300px;top:-150px;width:900px;height:900px}
 .bgc.b{right:-340px;bottom:-240px;width:960px;height:960px}
-.badge{position:absolute;left:190px;top:350px;width:700px;height:700px;border-radius:50%;background:#fff;box-shadow:0 36px 70px rgba(30,15,70,.5);display:flex;align-items:center;justify-content:center}
-.badge:after{content:"";position:absolute;left:18px;top:18px;right:18px;bottom:18px;border-radius:50%;border:3px dashed rgba(113,96,163,.45)}
-.badge .n{font-family:'Cramaten',sans-serif;font-size:560px;line-height:.8;color:var(--violet);text-shadow:.035em .035em 0 var(--red);position:relative;top:30px;left:-8px}
-.rib{position:absolute;left:50%;font-family:'Cramaten',sans-serif;text-transform:uppercase;color:#fff;white-space:nowrap;border-radius:999px;box-shadow:0 16px 34px rgba(30,15,70,.45);letter-spacing:.06em}
-.rib.o{top:312px;background:var(--red);font-size:84px;padding:20px 62px 14px;transform:translateX(-50%) rotate(-4deg)}
-.rib.w{top:964px;background:#3f3270;font-size:112px;padding:22px 76px 16px;transform:translateX(-50%) rotate(3deg)}
-.ticket{position:absolute;left:50%;margin-left:-450px;top:1160px;width:900px;border-radius:22px;box-shadow:0 30px 60px rgba(40,25,80,.55);transform:rotate(-3deg)}
-.btn{left:50%;transform:translateX(-50%);top:1590px;font-size:40px;padding:22px 64px}
-.star{width:120px}.s1{left:60px;top:420px}.s2{right:56px;top:800px;transform:rotate(18deg)}
+.row{position:absolute;left:0;right:0;top:400px;display:flex;justify-content:center;align-items:flex-end;gap:44px;white-space:nowrap}
+.row .n{font-family:'Cramaten',sans-serif;font-size:700px;line-height:.8;color:#fff;text-shadow:.035em .035em 0 var(--red)}
+.row .c{display:flex;flex-direction:column;align-items:flex-start;gap:18px;padding-bottom:34px}
+.row .o{font-family:'Cramaten',sans-serif;font-size:104px;line-height:.9;color:#fff;text-transform:uppercase;letter-spacing:.06em}
+.row .w{font-family:'Cramaten',sans-serif;font-size:224px;line-height:.8;color:#fff;text-transform:uppercase;text-shadow:.04em .04em 0 var(--red)}
+.ticket{position:absolute;left:50%;margin-left:-480px;top:1040px;width:960px;border-radius:22px;box-shadow:0 30px 60px rgba(40,25,80,.55);transform:rotate(-3deg)}
+.btn{left:50%;transform:translateX(-50%);top:1530px;font-size:40px;padding:22px 64px}
+.star{width:120px}.s1{left:56px;top:330px}.s2{right:60px;top:880px;transform:rotate(18deg)}
 </style></head><body>
 <div class="bgc a"></div><div class="bgc b"></div>
 <img class="star s1" src="zvezdy-w.png" alt=""><img class="star s2" src="zvezdy-w.png" alt="">
-<div class="badge"><div class="n">10</div></div>
-<div class="rib o">Осталось</div>
-<div class="rib w">билетов</div>
+<div class="row"><div class="n">5</div><div class="c"><div class="o">Осталось</div><div class="w">билетов</div></div></div>
 <img class="ticket" src="ticket.png" alt="">
 <div class="btn">skazbuh.ru</div>
 </body></html>
