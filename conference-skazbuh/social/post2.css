@@ -1,0 +1,14 @@
+@font-face{ font-family:'Cramaten'; src:url('Cramaten.ttf') format('truetype'); }
+:root{ --violet:#7160a3; --deep:#4f4080; --red:#d6001f; --pink:#e0476f; --sky:#8f9be8; }
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:radial-gradient(circle at 25% 30%, #8472b8 0%, #7160a3 45%, #54447f 100%)}
+body{font-family:'Liberation Sans',Arial,sans-serif;position:relative;overflow:hidden;color:#fff}
+.abs{position:absolute}
+.dm{position:absolute;width:34px;height:34px;transform:rotate(45deg)}
+.pill{position:absolute;background:var(--red);color:#fff;font-family:'Cramaten',sans-serif;text-transform:uppercase;border-radius:999px;white-space:nowrap;letter-spacing:.06em;box-shadow:0 14px 30px rgba(40,20,80,.45)}
+.big{position:absolute;font-family:'Cramaten',sans-serif;color:#fff;line-height:.8;white-space:nowrap;text-shadow:.04em .04em 0 var(--red)}
+.vert{position:absolute;font-family:'Cramaten',sans-serif;color:#fff;line-height:.8;white-space:nowrap;text-transform:uppercase;text-shadow:.04em .04em 0 var(--red);transform-origin:left top}
+.ticket{position:absolute;border-radius:24px;box-shadow:0 40px 70px rgba(30,15,70,.6)}
+.btn{position:absolute;background:#fff;color:var(--violet);font-weight:bold;border-radius:999px;white-space:nowrap;letter-spacing:.04em;box-shadow:0 14px 30px rgba(40,20,80,.4)}
+.star{position:absolute;height:auto}
+.ring{position:absolute;border-radius:50%;border:3px dashed rgba(255,255,255,.28)}
