@@ -17,5 +17,5 @@ body{{position:relative;overflow:hidden;background:linear-gradient(180deg,#e9e9e
 <div class="h">Ответ на требования <b>ФНС.</b><span>Как не навредить себе?</span></div>
 <img class="t" src="trebus-cutout.png">
 </body></html>"""
-open("partner-square.html","w").write(page(1080,1080,70,170,70,50,215,400,580,0))
+open("partner-square.html","w").write(page(1080,1080,70,170,70,50,215,400,500,0))
 open("partner-story.html","w").write(page(1080,1920,104,240,90,110,420,500,1120,0))
