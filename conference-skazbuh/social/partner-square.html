@@ -2,16 +2,23 @@
 @font-face{font-family:'Manrope';src:url('Manrope-Variable.ttf');font-weight:200 800}
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{width:1080px;height:1080px}
-body{position:relative;overflow:hidden;background:linear-gradient(180deg,#e9e9ec,#fff 70%);font-family:'Manrope',sans-serif}
+body{position:relative;overflow:hidden;background:linear-gradient(180deg,#e7e7ee,#fff 62%);font-family:'Manrope',sans-serif}
+.blob{position:absolute;border-radius:50%;background:linear-gradient(135deg,#8899eb,#7160a3);left:130px;top:540px;width:1000px;height:1000px}
+.blob2{position:absolute;border-radius:50%;background:#d6001f;left:-70px;top:900px;width:170px;height:170px}
 .logo{position:absolute;left:70px;top:50px;width:170px}
-.ln{position:absolute;left:70px;top:177px;width:64px;height:5px;background:#d6001f}
-.h{position:absolute;left:70px;right:70px;top:215px;font-weight:800;color:#1b1b2b;font-size:70px;line-height:1.06;letter-spacing:-.02em}
-.h span{display:block;color:#7160a3;margin-top:.3em}
-.h b{color:#d6001f}
-.t{position:absolute;left:50%;margin-left:-200px;top:500px;width:400px}
-.st{position:absolute;right:70px;top:50px;width:0px}
+.ln{position:absolute;left:70px;top:175px;width:64px;height:5px;background:#d6001f}
+.h{position:absolute;left:70px;right:70px;top:190px;font-weight:800;color:#1b1b2b;font-size:74px;line-height:1.08;letter-spacing:-.025em}
+.pill{display:inline-block;background:#d6001f;color:#fff;border-radius:.3em;padding:0 .26em .04em;margin-top:.08em;transform:rotate(-2deg)}
+.h .q{display:block;color:#7160a3;margin-top:.22em}
+.card{position:absolute;left:170px;top:610px;width:740px;height:380px;background:#fff;border-radius:56px;box-shadow:0 30px 70px rgba(80,60,150,.28);display:flex;align-items:center;justify-content:center}
+.card img{width:300px}
+.st{position:absolute;width:110px}
+.st1{left:925px;top:660px}
+.st2{left:55px;top:760px;transform:rotate(16deg)}
 </style></head><body>
+<div class="blob"></div><div class="blob2"></div>
+<img class="st st1" src="zvezdy-w.png"><img class="st st2" src="zvezdy-v.png">
 <img class="logo" src="logo-color.png"><div class="ln"></div>
-<div class="h">Ответ на требования <b>ФНС.</b><span>Как не навредить себе?</span></div>
-<img class="t" src="trebus-cutout.png">
+<div class="h">Ответ на требования <span class="pill">ФНС.</span><span class="q">Как не навредить себе?</span></div>
+<div class="card"><img src="trebus-cutout.png"></div>
 </body></html>
