@@ -1,0 +1,18 @@
+@font-face{ font-family:'Cramaten'; src:url('Cramaten.ttf') format('truetype'); }
+:root{ --violet:#7160a3; --deep:#5a4a8c; --red:#d6001f; --white:#fff; }
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:var(--violet)}
+body{font-family:'Liberation Sans',Arial,sans-serif;position:relative;overflow:hidden;color:#fff}
+.bgc{position:absolute;border-radius:50%;background:var(--deep)}
+.abs{position:absolute}
+.logo{position:absolute;height:auto}
+.eyebrow{position:absolute;font-weight:bold;letter-spacing:.2em;text-transform:uppercase;color:#fff;white-space:nowrap}
+.disc{position:absolute;border-radius:50%;background:#fff}
+.girl{position:absolute;height:auto}
+.left{position:absolute;font-family:'Cramaten','Liberation Sans',sans-serif;text-transform:uppercase;color:#fff;line-height:1}
+.ten{position:absolute;font-family:'Cramaten','Liberation Sans',sans-serif;color:#fff;line-height:.8;text-shadow:.04em .04em 0 var(--red)}
+.pill{position:absolute;background:var(--red);color:#fff;font-weight:bold;text-transform:uppercase;letter-spacing:.12em;border-radius:999px;text-align:center;white-space:nowrap}
+.title{position:absolute;font-family:'Cramaten','Liberation Sans',sans-serif;text-transform:uppercase;color:#fff;line-height:1.0;letter-spacing:.02em}
+.meta{position:absolute;font-weight:bold;letter-spacing:.06em;color:#fff;white-space:nowrap}
+.btn{position:absolute;background:#fff;color:var(--violet);font-weight:bold;border-radius:999px;text-align:center;white-space:nowrap;letter-spacing:.04em}
+.star{position:absolute;height:auto}
