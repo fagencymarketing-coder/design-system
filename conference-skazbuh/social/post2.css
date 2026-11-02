@@ -6,9 +6,9 @@ body{font-family:'Liberation Sans',Arial,sans-serif;position:relative;overflow:h
 .abs{position:absolute}
 .dm{position:absolute;width:34px;height:34px;transform:rotate(45deg)}
 .pill{position:absolute;background:var(--red);color:#fff;font-family:'Cramaten',sans-serif;text-transform:uppercase;border-radius:999px;white-space:nowrap;letter-spacing:.06em;box-shadow:0 14px 30px rgba(40,20,80,.45)}
-.big{position:absolute;font-family:'Cramaten',sans-serif;color:#fff;line-height:.8;white-space:nowrap;text-shadow:.04em .04em 0 var(--red)}
+.big{position:absolute;font-family:'Cramaten',sans-serif;color:#fff;line-height:.8;white-space:nowrap;text-shadow:none}
 .vert{position:absolute;font-family:'Cramaten',sans-serif;color:#fff;line-height:.8;white-space:nowrap;text-transform:uppercase;text-shadow:.04em .04em 0 var(--red);transform-origin:left top}
-.ticket{position:absolute;border-radius:24px;box-shadow:0 40px 70px rgba(30,15,70,.6)}
+.ticket{position:absolute;border-radius:24px;box-shadow:0 28px 50px rgba(30,15,70,.45)}
 .btn{position:absolute;background:#fff;color:var(--violet);font-weight:bold;border-radius:999px;white-space:nowrap;letter-spacing:.04em;box-shadow:0 14px 30px rgba(40,20,80,.4)}
 .star{position:absolute;height:auto}
 .ring{position:absolute;border-radius:50%;border:3px dashed rgba(255,255,255,.28)}
