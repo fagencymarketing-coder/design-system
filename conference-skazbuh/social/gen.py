@@ -1,0 +1,21 @@
+import sys
+def page(W,H,hs,logow,lx,ly,hy,tw,ty,starw):
+    return f"""<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><style>
+@font-face{{font-family:'Manrope';src:url('Manrope-Variable.ttf');font-weight:200 800}}
+*{{margin:0;padding:0;box-sizing:border-box}}
+html,body{{width:{W}px;height:{H}px}}
+body{{position:relative;overflow:hidden;background:linear-gradient(180deg,#e9e9ec,#fff 70%);font-family:'Manrope',sans-serif}}
+.logo{{position:absolute;left:{lx}px;top:{ly}px;width:{logow}px}}
+.ln{{position:absolute;left:{lx}px;top:{ly+int(logow*0.62)+22}px;width:64px;height:5px;background:#d6001f}}
+.h{{position:absolute;left:{lx}px;right:{lx}px;top:{hy}px;font-weight:800;color:#1b1b2b;font-size:{hs}px;line-height:1.06;letter-spacing:-.02em}}
+.h span{{display:block;color:#7160a3;margin-top:.3em}}
+.h b{{color:#d6001f}}
+.t{{position:absolute;left:50%;margin-left:-{tw//2}px;top:{ty}px;width:{tw}px}}
+.st{{position:absolute;right:{lx}px;top:{ly}px;width:{starw}px}}
+</style></head><body>
+<img class="logo" src="logo-color.png"><div class="ln"></div>
+<div class="h">Ответ на требования <b>ФНС.</b><span>Как не навредить себе?</span></div>
+<img class="t" src="trebus-cutout.png">
+</body></html>"""
+open("partner-square.html","w").write(page(1080,1080,70,170,70,50,215,560,440,0))
+open("partner-story.html","w").write(page(1080,1920,104,240,90,110,420,700,1100,0))
